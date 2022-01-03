@@ -143,7 +143,7 @@ h3  {
     font-size: large;
 }
 @keyframes dropDown{
-    0%{top:-15%;}
+    0%{top:-100%;}
     100%{top:1%;}
 }
 #main{
@@ -185,13 +185,13 @@ h3  {
     border-right-color: black;
     font-size: 100%;
     font-family:W95FA;
-    top:1%;
+    top:3%;
     height:10%;
     width:100%
 }
 @keyframes backUp{
     0%{top:1%;}
-    100%{top:-15%;}
+    100%{top:-100%;}
 }
 @keyframes leftOut{
     0%{left:0px;}
