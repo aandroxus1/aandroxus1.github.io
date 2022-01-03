@@ -25,8 +25,8 @@ body {
     border-right-color: black;
     border-width: 2px;
     top:40%;
-    height:8%;
-    width: 20%;
+    height:100px;
+    width: 500px;
     animation:fadeIn 3s;
     
 }
@@ -80,7 +80,7 @@ h3  {
     font-size: 100%;
 }
 #text-instruct  {
-    font-size: 95%;
+    font-size:medium
 }
 #winLock    {
     position: absolute;
