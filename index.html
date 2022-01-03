@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="app.js"></script>
+        <link rel="stylesheet" href="main.css">
+        <audio id="win95startmp3" src="Win95Startup.mp3" loop="false"></audio>
+        <audio id="error" src="error.mp3" loop="false"></audio>
+    </head>
+    <body>
+<!--------------------------------------------->
+        <div> <!--Login Screen-->
+
+            <dialog open=true id="dialog" draggable="false">
+                <h3 id="welcome"> Welcome To Windows</h3>
+                <h4 id="text-instruct">Type a user name and password to log on to Windows.</h4>
+                <img id="winLock" src="Win95_Key.png">
+                <button id="enter" type="button" onclick="Enter()">OK</button>
+                <label id="usernametext">User name:</label>
+                <input id="username" type="text" maxlength="15"><br>
+                <label id=passwordtext>Password:</label>
+                <input id="password" type="text" onkeydown="passwordEntry(event)" maxlength="15"> 
+                <button id="cancel" type="button" onclick="Cancel()">Cancel</button>
+            </dialog>
+
+            <dialog open=false id="errorDialogue">
+                <h3 id="errorText">Error!</h3>
+                <img id="errorIcon" src="Win95_Error.png">
+                <label id="errorMessage">Incorrect User name or Password!</label>
+                <button id="x" type="button" onClick="closeError()" onkeydown="escError(event)">X</button>
+            </dialog>
+
+        </div> <!--Login Screen End-->
+
+<!--------------------------------------------->
+
+        <div> <!--Main Menu-->
+
+            <dialog id="sidebar" open="false" draggable="false">
+                <h3 id="sidebarTitle">sidebar.exe</h3>
+                <button id="diary" onClick="diary_CloseHome()">Diary</button>
+                <hr/>
+            </dialog>
+            <dialog id="main" open="false">
+                <h3 id="menuGreetingTitle">Introduction.exe</h3>
+                <h1 id="menuGreeting">Hello Alex!</h1>
+            </dialog>
+
+        </div> <!--Main Menu End-->
+
+<!--------------------------------------------->
+
+        <div> <!--Return to Menu-->
+
+            <dialog id="returnButton" open="false">
+                <button id="returnButton-button" onClick="OpenHome()">Back to Home</button>
+            </dialog>
+
+        </div>
+
+<!--------------------------------------------->
+<!--Diary-->
+        <dialog id="diaryBody">
+            <input type="text" id="diaryText">
+            <label id="diaryData"></label>
+        </dialog>
+
+<!--------------------------------------------->
+        <script>
+            document.addEventListener("keydown", function(event){
+                if (event.key === "Escape"){
+                    closeError();
+                }
+            });
+            document.getElementById("errorDialogue").open=false;
+            document.getElementById("main").open=false;
+            document.getElementById("sidebar").close();
+            document.getElementById("returnButton").close();
+            document.getElementById("diaryBody").close();
+        </script>
+    </body>
+</html>

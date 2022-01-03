@@ -1,0 +1,254 @@
+body {
+    overflow:hidden;
+    background-color: #008080;
+    color:black;
+    text-align: center;
+    font-family: W95FA;
+}
+#welcome    {
+    position:absolute;
+    left:1px;
+    top:-9%;
+    background-color: rgb(0,0,128);
+    color:white;
+
+}
+#dialog {
+    background-color:rgb(192, 192, 192);
+    border-top-color: white;
+    border-left-color: white;
+    border-bottom-color: black;
+    border-right-color: black;
+    border-width: 2px;
+    top:40%;
+    height:100px;
+    width: 500px;
+    animation:fadeIn 3s;
+    
+}
+@keyframes fadeIn   {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+#username, #password   {
+    font-family: W95FA;
+    border-top-color: black;
+    border-left-color: black;
+    border-bottom-color: white;
+    border-right-color: white;
+    width:100px;
+    position: absolute;
+    left:40%;
+}
+#username   {
+    position: absolute;
+    bottom: 33%;
+}
+#usernametext, #passwordtext    {
+    position: absolute;
+    left:20%;
+    bottom:35%;
+}
+#passwordtext, #password    {
+    position: absolute;
+    bottom: 10%;
+}
+#enter  {
+    position: absolute;
+    top:24%;
+    right:4%;
+    font-size:80%;
+    font-family: W95FA;
+    width:14%;
+    height:16%;
+    border-top-color: white;
+    border-left-color: white;
+    border-bottom-color: black;
+    border-right-color: black;
+}
+h3  {
+    width:100%;
+    text-align: left;
+    font-size: 100%;
+}
+#text-instruct  {
+    font-size: 95%;
+}
+#winLock    {
+    position: absolute;
+    top:20%;
+    left:3%;
+}
+#cancel {
+    position: absolute;
+    top:44%;
+    right:4%;
+    font-size:80%;
+    font-family: W95FA;
+    width:14%;
+    height:16%;
+    border-top-color: white;
+    border-left-color: white;
+    border-bottom-color: black;
+    border-right-color: black;
+}
+#errorDialogue  {
+    background-color:rgb(192, 192, 192);
+    border-top-color: white;
+    border-left-color: white;
+    border-bottom-color: black;
+    border-right-color: black;
+    border-width: 2px;
+    top:45%;
+    left:15%;
+    height:100px;
+    width: 300px;;
+}
+#errorText{
+    position:absolute;
+    left:0%;
+    top:-9%;
+    background-color: rgb(0,0,128);
+    color:white;
+}
+#errorMessage{
+    font-size: 95%;
+    position: absolute;
+    bottom:45%;
+    left:15%;
+    text-align: center;
+}
+#x{
+    background-color: darkgrey;
+    color: grey;
+    position: absolute;
+    right:0%;
+    top:0%;
+    border-top-color: white;
+    border-left-color: white;
+    border-bottom-color: black;
+    border-right-color: black;
+}
+#errorIcon{
+    position: absolute;
+    left:1%;
+    bottom:35%;
+}
+#menuGreetingTitle{
+    background-color: rgb(0,0,128);
+    color:white;
+    position: absolute;
+    top:-10%;
+    left:0%;
+}
+@keyframes dropDown{
+    0%{top:-15%;}
+    100%{top:1%;}
+}
+#main{
+    position: absolute;
+    background-color:rgb(192, 192, 192);
+    border-top-color: white;
+    border-left-color: white;
+    border-bottom-color: black;
+    border-right-color: black;
+    border-width: 2px;
+    top:1%;
+    height:100px;
+    width: 200px;
+    left:0px;
+}
+@keyframes leftIn{
+    0%{left: -15%;}
+    50%{left:-15%}
+    100%{left:0px;}
+}
+#sidebar{
+    background-color:rgb(192, 192, 192);
+    border-top-color: white;
+    border-left-color: white;
+    border-bottom-color: black;
+    border-right-color: black;
+    border-width: 2px;
+    top:0%;
+    margin-left:0%;
+    height:97%;
+    width:10%;;
+}
+#diary{
+    position: relative;
+    background-color:rgb(192, 192, 192);
+    border-top-color: white;
+    border-left-color: white;
+    border-bottom-color: black;
+    border-right-color: black;
+    font-size: 100%;
+    font-family:W95FA;
+    top:1%;
+    height:10%;
+    width:100%
+}
+@keyframes backUp{
+    0%{top:1%;}
+    100%{top:-15%;}
+}
+@keyframes leftOut{
+    0%{left:0px;}
+    100%{left:-15%}
+}
+@keyframes rightIn{
+    0%{right:-20%;}
+    50%{right:-20%;}
+    100%{margin-right:2%;}
+}
+@keyframes rightOut{
+    0%{margin-right: 2%;}
+    100%{right:-20%}
+}
+#returnButton{
+    position: absolute;
+    font-family:W95FA;
+    background-color:rgb(192, 192, 192);
+    border-top-color: white;
+    border-left-color: white;
+    border-bottom-color: black;
+    border-right-color: black;
+    border-width: 2px;
+    margin-top:2%;
+    margin-right:2%;
+}
+#returnButton-button{
+    font-family:W95FA;
+    background-color:rgb(192, 192, 192);
+    border-top-color: white;
+    border-left-color: white;
+    border-bottom-color: black;
+    border-right-color: black;
+}
+@keyframes diaryBodyIn{
+    0%{bottom:-100%;}
+    100%{bottom: 0%;}
+}
+@keyframes diaryBodyOut{
+    0%{bottom: 0%;}
+    100%{bottom:-100%;}
+}
+#diaryBody{
+    position: absolute;
+    font-family:W95FA;
+    background-color:rgb(192, 192, 192);
+    border-top-color: white;
+    border-left-color: white;
+    border-bottom-color: black;
+    border-right-color: black;
+    width: 75%;
+    height:60%;
+    bottom:0%;
+}
+#sidebarTitle{
+    position:absolute;
+    left:0%;
+    top:-1%;
+    background-color: rgb(0,0,128);
+    color:white;
+}
