@@ -1,3 +1,7 @@
+@font-face {
+    font-family: W95FA;
+    src: url(W95FA.otf);
+}
 body {
     overflow:hidden;
     background-color: #008080;
@@ -21,8 +25,8 @@ body {
     border-right-color: black;
     border-width: 2px;
     top:40%;
-    height:100px;
-    width: 500px;
+    height:8%;
+    width: 20%;
     animation:fadeIn 3s;
     
 }
