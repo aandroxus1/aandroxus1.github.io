@@ -44,13 +44,17 @@ function CloseHome(){
     document.getElementById("returnButton").style.animation="rightIn 4s";
 
 }
+function LoginClose(){
+    document.getElementById("dialog").open=false;
+}
 function Enter()    {
     username=document.getElementById("username").value;
     password=document.getElementById("password").value;
     if (username == "alec") {
         if (password =="pass")  {
             document.getElementById("password").value=""
-            document.getElementById("dialog").open=false
+            document.getElementById("dialog").style.animation="fadeOut 1s"
+            setTimeout(LoginClose, 990)
             OpenHome();
             
         }
