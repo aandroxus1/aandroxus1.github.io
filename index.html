@@ -11,7 +11,7 @@
         <div> <!--Login Screen-->
 
             <dialog open=true id="dialog" draggable="false">
-                <h3 id="welcome"> Welcome To Windows (V0.04)</h3>
+                <h3 id="welcome"> Welcome To Windows (V0.05)</h3>
                 <h4 id="text-instruct">Type a user name and password to log on to Windows.</h4>
                 <img id="winLock" src="Win95_Key.png">
                 <button id="enter" type="button" onclick="Enter()">OK</button>
@@ -29,7 +29,7 @@
                 <button id="x" type="button" onClick="closeError()" onkeydown="escError(event)">X</button>
             </dialog>
 
-        </div> <!--Login Screen End-->
+        </div>
 
 <!--------------------------------------------->
 
@@ -38,14 +38,14 @@
             <dialog id="sidebar" open="false" draggable="false">
                 <h3 id="sidebarTitle">sidebar.exe</h3>
                 <button id="diary" onClick="diary_CloseHome()">Diary</button>
-                <hr/>
+                <button id="calculator" onClick="calc_CloseHome()">Calculator</button>
             </dialog>
             <dialog id="main" open="false">
                 <h3 id="menuGreetingTitle">Introduction.exe</h3>
                 <h1 id="menuGreeting">Hello Alex!</h1>
             </dialog>
 
-        </div> <!--Main Menu End-->
+        </div>
 
 <!--------------------------------------------->
 
@@ -64,6 +64,30 @@
             <label id="diaryData"></label>
         </dialog>
 
+<!--------------------------------------------->
+<!--Calculator-->
+        <div>
+            <dialog id="calcBody">
+                <label id="calcTitle">calculator.exe</label>
+                <h3 id="calcOutput">0</h3>
+                <div id="calcButtons">                
+                    <button id="calc7" onclick="calc_Add">7</button>
+                    <button id="calc8">8</button>
+                    <button id="calc9">9</button>
+                    <button id="calc4">4</button>
+                    <button id="calc5">5</button>
+                    <button id="calc6">6</button>
+                    <button id="calc1">1</button>
+                    <button id="calc2">2</button>
+                    <button id="calc3">3</button>
+                    <button id="calc0">0</button>
+                    <button id="calcDiv">/</button>
+                    <button id="calcMtp">*</button>
+                    <button id="calcAdd">+</button>
+                    <button id="calcSub">-</button>
+                </div>
+            </dialog>
+        </div>
 <!--------------------------------------------->
         <script>
             document.addEventListener("keydown", function(event){

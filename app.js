@@ -13,15 +13,22 @@ function diary_CloseHome(){
     document.getElementById("diaryBody").style.animation="diaryBodyIn 1s"
     CloseHome()
 }
+function calc_CloseHome(){
+    document.getElementById("calcBody").open=true;
+    document.getElementById("calcBody").style.animation="calcBodyIn 1s"
+    CloseHome()
+}
 function OpenHomeX(){
     document.getElementById("returnButton").close();
 }
 function CloseAll(){
     document.getElementById("diaryBody").open=false;
+    document.getElementById("calcBody").open=false;
 }
 function OpenHome(){
     /*Add Open/Close dialogs here*/
-    document.getElementById("diaryBody").style.animation="diaryBodyOut 1s"
+    document.getElementById("diaryBody").style.animation="diaryBodyOut 1s";
+    document.getElementById("calcBody") .style.animation="calcBodyOut 1s";
 
     setTimeout(CloseAll,900)
     document.getElementById("main").open=true;
