@@ -62,6 +62,8 @@ function Enter()    {
             document.getElementById("password").value=""
             document.getElementById("dialog").style.animation="fadeOut 1s"
             setTimeout(LoginClose, 990)
+            document.getElementById("win95startmp3").loop = false;
+            document.getElementById("win95startmp3").play()
             OpenHome();
             
         }
