@@ -97,6 +97,7 @@ function Cancel()   {
 }
 // Diary Code
 function DocumentAccess(){
+    var content = document.getElementById("diaryText")
     fs.writeFile('/Users/joe/test.txt', content, { flag: 'a+' }, err => {
         if(err) {
             console.log(err)
