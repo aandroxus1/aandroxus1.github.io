@@ -1,0 +1,30 @@
+@font-face {
+    font-family: W95FA;
+    src: url(W95FA.otf);
+}
+body {
+    overflow:hidden;
+    background-color: #008080;
+    color:black;
+    text-align: center;
+    font-family: W95FA;
+}
+#sad{
+    position: absolute;
+    top:0%;
+    font-family: W95FA;
+    font-size:xx-large;
+    text-align: left;
+}
+#text{
+    position: absolute;
+    top:10%;
+    text-align: center;
+    font-size:large;
+}
+a{
+    position: absolute;
+    top:15%;
+    text-align: center;
+    font-size:large;
+}
