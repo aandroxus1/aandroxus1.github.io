@@ -28,6 +28,7 @@ function CloseAll(){
 function OpenHome(){
     /*Add Open/Close dialogs here*/
     document.getElementById("diaryBody").style.animation="diaryBodyOut 1s";
+    document.getElementById("calcOutput").innerHTML=0
     document.getElementById("calcBody") .style.animation="calcBodyOut 1s";
 
     setTimeout(CloseAll,900)
@@ -104,4 +105,24 @@ function DocumentAccess(){
             return
         }
     })
+}
+//Calculator Code
+function Calculator(inp){
+    if (inp=="="){
+        let formula = document.getElementById("calcOutput").innerHTML;
+        document.getElementById("calcOutput").innerHTML="yes"
+        let var1=0
+        for (var i=0; i>=formula.length; i++){
+            if (typeof formula[i] != "number"){
+                N = index
+            }
+        }
+        for (var i = 0; i <= N; i++) {
+            var1.push(formula[i]);
+        }
+        document.getElementById("calcOutput").innerHTML=var1
+    }
+    else{
+        document.getElementById("calcOutput").innerHTML=(document.getElementById("calcOutput").innerHTML+inp)
+    }
 }

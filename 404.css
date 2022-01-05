@@ -6,7 +6,6 @@ body {
     overflow:hidden;
     background-color: #008080;
     color:black;
-    text-align: center;
     font-family: W95FA;
 }
 #sad{
@@ -14,7 +13,7 @@ body {
     top:0%;
     font-family: W95FA;
     font-size:xx-large;
-    text-align: left;
+    text-align: center;
 }
 #text{
     position: absolute;

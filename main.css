@@ -456,3 +456,21 @@ h3  {
     top:55%;
     background-color: rgb(200,196,196);
 }
+#calcEql{
+    position: absolute;
+    font-family:W95FA;
+    width:18%;
+    height:8%;
+    left:60%;
+    top:55%;
+    background-color: rgb(200,196,196);
+}
+#calcDml{
+    position: absolute;
+    font-family:W95FA;
+    width:18%;
+    height:8%;
+    left:40%;
+    top:55%;
+    background-color: rgb(200,196,196);
+}
