@@ -5,13 +5,8 @@ function learn(){
 }
 function settings(){
     let data = "Testing the fs.writeFile R/W capability.";
-    writeFileSync("questions.txt", data, (err) => {
-        if (err)
-          console.log(err);
-        else {
-          console.log("File written successfully\n");
-          console.log("The written has the following contents:");
-          console.log(readFileSync("questions.txt", "utf8"));
-        }
-    });
+    fs.appendFile("file.txt", data,function(err){
+        if(err) throw err;
+        console.log('IS WRITTEN')
+        });
 }
