@@ -69,7 +69,7 @@ function Enter()    {
     username=document.getElementById("username").value;
     password=document.getElementById("password").value;
     if (username == "alec") {
-        if (password =="  ")  {
+        if (password =="pass")  {
             document.getElementById("password").value=""
             document.getElementById("dialog").style.animation="fadeOut 1s"
             setTimeout(LoginClose, 990)
