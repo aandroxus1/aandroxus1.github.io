@@ -1,11 +1,11 @@
-import { writeFileSync, readFileSync } from 'fs';
+const fs = require("fs");
 
-function learn(){
-    console.log("xd")
+function option1() {
+    alert("hello")
 }
-function settings(){
+function option2() {
     let data = "Testing the fs.writeFile R/W capability.";
-    fs.appendFile("file.txt", data,function(err){
+    fs.appendFile("file.txt", data,[flag="a+"],function(err){
         if(err) throw err;
         console.log('IS WRITTEN')
         });
