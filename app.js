@@ -142,16 +142,28 @@ function caesar_CloseHome(){
     CloseHome()
 }
 function caesar_listener(){
+    let finalList = []
+    let numbers = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25]
     let encrypt = document.getElementById("caesar_entry").value;
-    let ascii_list = [];
-    for (let x of encrypt){
-        ascii_list.push(x.charCodeAt(0))
+    for(let b of numbers){
+        encrypt = encrypt.toLowerCase();
+        let ascii_list = "";
+        for (let x of encrypt){
+            ascii_list=ascii_list.concat(x.charCodeAt(0))
+        }
+        encrypt = "";
+        for (let x of ascii_list){
+            x++;
+            if ((String.fromCharCode(x)) == "{"){
+                x = ("a".charCodeAt(0))
+            }
+            if ((String.fromCharCode(x)) == "!"){
+                x = (" ".charCodeAt(0))
+            }
+            encrypt = encrypt.concat(String.fromCharCode(x))
+        }
+        encrypt = encrypt.concat("<br>")
+        finalList = finalList.concat(encrypt)
+        document.getElementById("caesar_output").innerHTML=finalList + "<br>";
     }
-    let output_list=[];
-    for (let x of ascii_list){
-        x++;
-        output_list.push(x.fromCharCode(0))
-    }
-    document.getElementById("caesar_output").innerHTML=output_list;
-    
 }
