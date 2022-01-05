@@ -29,5 +29,16 @@ body{
     height:100%;
 }
 #subject_select{
-    margin-top:10%;
+    position:absolute;
+    left:25%;
+    top:15%;
+    height:200px;
+    width:300px;
+}
+#subject_settings{
+    position:absolute;
+    right:25%;
+    top:15%;
+    height:200px;
+    width:300px;
 }
