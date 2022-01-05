@@ -25,7 +25,8 @@ body{
     margin-top:0%;
 }
 #menu_options{
-    margin-top:5%;
+    width:100%;
+    height:100%;
 }
 #subject_select{
     margin-top:15%;

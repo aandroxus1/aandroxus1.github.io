@@ -135,3 +135,23 @@ function Calculator(inp){
         document.getElementById("calcOutput").innerHTML=(document.getElementById("calcOutput").innerHTML+inp)
     }
 }
+//Caesar Code
+function caesar_CloseHome(){
+    document.getElementById("caesarBody").open=true;
+    document.getElementById("caesarBody").style.animation="calcBodyIn 1s"
+    CloseHome()
+}
+function caesar_listener(){
+    let encrypt = document.getElementById("caesar_entry").value;
+    let ascii_list = [];
+    for (let x of encrypt){
+        ascii_list.push(x.charCodeAt(0))
+    }
+    let output_list=[];
+    for (let x of ascii_list){
+        x++;
+        output_list.push(x.fromCharCode(0))
+    }
+    document.getElementById("caesar_output").innerHTML=output_list;
+    
+}

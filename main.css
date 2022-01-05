@@ -353,6 +353,19 @@ h3  {
     height:10%;
     width:100%
 }
+#caesar_decrypt{
+    position: relative;
+    background-color:rgb(192, 192, 192);
+    border-top-color: white;
+    border-left-color: white;
+    border-bottom-color: black;
+    border-right-color: black;
+    font-size: 100%;
+    font-family:W95FA;
+    top:7%;
+    height:10%;
+    width:100%
+}
 
 /*Calculator*/
 
@@ -534,4 +547,11 @@ h3  {
     left:40%;
     top:55%;
     background-color: rgb(200,196,196);
+}
+/*Caesar Decrypt*/
+#caesarBody{
+    position: absolute;
+    width:200px;
+    height:300px;
+    margin-top: 10%;
 }

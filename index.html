@@ -51,6 +51,7 @@
                 <h3 id="sidebarTitle">sidebar.exe</h3>
                 <button id="diary" onClick="diary_CloseHome()">Diary</button>
                 <button id="calculator" onClick="calc_CloseHome()">Calculator</button>
+                <button id="caesar_decrypt" onclick="caesar_CloseHome()">Caesar Decrypt</button>
             </dialog>
             <dialog id="main" open="false">
                 <h3 id="menuGreetingTitle">Introduction.exe</h3>
@@ -100,6 +101,16 @@
                     <button id="calcEql"onClick="Calculator('=')">=</button>
                     <button id="calcDml"onClick="Calculator('.')">.</button>
                 </div>
+            </dialog>
+        </div>
+<!--------------------------------------------->
+<!--Caesar Decrypt-->
+        <div>
+            <dialog id="caesarBody">
+                <label class=titleBar>caesar_decrypt.exe</label>
+                <input type="text" id="caesar_entry">
+                <label id="caesar_output">Output will be here</label>
+                <button id="caesar_start" onclick="caesar_listener()">Start</button>
             </dialog>
         </div>
 <!--------------------------------------------->
