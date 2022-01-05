@@ -36,7 +36,7 @@ function CloseAll(){
     document.getElementById("calcBody").open=false;
 }
 function OpenHome(){
-    /*Add Open/Close dialogs here*/
+    //Add Open/Close dialogs here
     document.getElementById("diaryBody").style.animation="diaryBodyOut 1s";
     document.getElementById("calcOutput").innerHTML=0
     document.getElementById("calcBody") .style.animation="calcBodyOut 1s";
@@ -69,7 +69,7 @@ function Enter()    {
     username=document.getElementById("username").value;
     password=document.getElementById("password").value;
     if (username == "alec") {
-        if (password =="pass")  {
+        if (password =="  ")  {
             document.getElementById("password").value=""
             document.getElementById("dialog").style.animation="fadeOut 1s"
             setTimeout(LoginClose, 990)
@@ -120,14 +120,14 @@ function DocumentAccess(){
 function Calculator(inp){
     if (inp=="="){
         let formula = document.getElementById("calcOutput").innerHTML;
-        let var1=0
-        for (var i=0; i>=formula.length; i++){
+        let var1=null;
+        for (let i in formula.length){
             if (typeof formula[i] != "number"){
-                N = index
+                break
             }
-        }
-        for (var i = 0; i <= N; i++) {
-            var1.push(formula[i]);
+            else{
+                var1.append(formula[i])
+            }
         }
         document.getElementById("calcOutput").innerHTML=var1
     }
