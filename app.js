@@ -3,6 +3,16 @@ function loginError(){
     document.getElementById("error").loop = false;
     document.getElementById("error").play()
 }
+function loginClose_NewAccount(){
+    document.getElementById("dialog").style.animation="fadeOut 1s"
+    setTimeout(LoginClose,950)
+    document.getElementById("NewAccount").open=true;
+    document.getElementById("NewAccount").style.animation="fadeIn 1s"
+}
+function AccountCreation(name, username, password){
+    const fs = require("fs");
+    fs.appendFile("login.txt",(name,", ",username,", ",password));
+}
 function closeError(){
     document.getElementById("errorDialogue").open=false;
     document.getElementById("error").pause()
@@ -110,7 +120,6 @@ function DocumentAccess(){
 function Calculator(inp){
     if (inp=="="){
         let formula = document.getElementById("calcOutput").innerHTML;
-        document.getElementById("calcOutput").innerHTML="yes"
         let var1=0
         for (var i=0; i>=formula.length; i++){
             if (typeof formula[i] != "number"){
