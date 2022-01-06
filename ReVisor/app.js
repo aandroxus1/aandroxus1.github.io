@@ -1,12 +1,13 @@
-const fs = require("fs");
-
-function option1() {
-    alert("hello")
-}
-function option2() {
-    let data = "Testing the fs.writeFile R/W capability.";
-    fs.appendFile("file.txt", data,[flag="a+"],function(err){
-        if(err) throw err;
-        console.log('IS WRITTEN')
-        });
-}
+const fs = require('fs');
+  
+let data = "This is a file containing a collection of books.";
+  
+fs.writeFile("books.txt", data, (err) => {
+  if (err)
+    console.log(err);
+  else {
+    console.log("File written successfully\n");
+    console.log("The written has the following contents:");
+    console.log(fs.readFileSync("books.txt", "utf8"));
+  }
+});
