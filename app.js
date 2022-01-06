@@ -34,12 +34,14 @@ function OpenHomeX(){
 function CloseAll(){
     document.getElementById("diaryBody").open=false;
     document.getElementById("calcBody").open=false;
+    document.getElementById("caesarBody").open=false;
 }
 function OpenHome(){
-    //Add Open/Close dialogs here
+    //Add Close dialogs here
     document.getElementById("diaryBody").style.animation="diaryBodyOut 1s";
     document.getElementById("calcOutput").innerHTML=0
     document.getElementById("calcBody") .style.animation="calcBodyOut 1s";
+    document.getElementById("caesarBody").style.animation="caesarBodyOut 1s"
 
     setTimeout(CloseAll,900)
     document.getElementById("main").open=true;
@@ -138,7 +140,7 @@ function Calculator(inp){
 //Caesar Code
 function caesar_CloseHome(){
     document.getElementById("caesarBody").open=true;
-    document.getElementById("caesarBody").style.animation="calcBodyIn 1s"
+    document.getElementById("caesarBody").style.animation="caesarBodyIn 1s"
     CloseHome()
 }
 function caesar_listener(){

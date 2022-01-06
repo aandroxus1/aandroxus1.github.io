@@ -549,9 +549,17 @@ h3  {
     background-color: rgb(200,196,196);
 }
 /*Caesar Decrypt*/
+@keyframes caesarBodyIn{
+    0%{margin-top:-100%}
+    100%{margin-top:0%}
+}
+@keyframes caesarBodyOut{
+    0%{margin-top:0%}
+    100%{margin-top:-100%}
+}
 #caesarBody{
     position: absolute;
     width:200px;
     height:500px;
-    margin-top: 10%;
+    margin-top: 0%;
 }
