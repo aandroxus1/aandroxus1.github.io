@@ -120,21 +120,16 @@ function DocumentAccess(){
 }
 //Calculator Code
 function Calculator(inp){
+    document.getElementById("calcOutput").innerHTML=(document.getElementById("calcOutput").innerHTML+inp)
     if (inp=="="){
         let formula = document.getElementById("calcOutput").innerHTML;
-        let var1=null;
-        for (let i in formula.length){
-            if (typeof formula[i] != "number"){
-                break
-            }
-            else{
-                var1.append(formula[i])
-            }
-        }
-        document.getElementById("calcOutput").innerHTML=var1
-    }
-    else{
-        document.getElementById("calcOutput").innerHTML=(document.getElementById("calcOutput").innerHTML+inp)
+        formula_split = formula.split("+")
+        formula_split = formula_split.join("")
+        formula_split = formula.split("-")
+        formula_split = formula_split.join("")
+        formula_split = formula.split("/")
+        formula_split = formula_split.join("")
+        document.getElementById("calcOutput").innerHTML=formula_split;
     }
 }
 //Caesar Code
