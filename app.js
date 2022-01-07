@@ -119,13 +119,38 @@ function DocumentAccess(){
     })
 }
 //Calculator Code
+class Operator {
+    constructor(operator, type, complete) {
+        this.assigned=false
+        this.type=""
+        this.complete=false
+    }
+
+}
+
 function Calculator(inp){
-    document.getElementById("calcOutput").innerHTML=(document.getElementById("calcOutput").innerHTML+inp)
+    if (inp=="+" && Operator.assigned == false){
+        Operator.type="+"
+        Operator.assigned=true
+    }
+    if (inp=="-" && Operator.assigned == false){
+        Operator.type="-"
+        Operator.assigned=true
+    }
+    if (Operator.complete){
+        document.getElementById("calcOutput").innerHTML=inp
+        Operator.complete=false
+    }
+    else{
+        document.getElementById("calcOutput").innerHTML+=inp
+    }
     if (inp=="="){
         let formula = document.getElementById("calcOutput").innerHTML;
-        formula_split = formula.split("+")
+        formula_split = formula.split('+').join(',').split('-').join(',').split('/').join(",").split("*").join(",")
         document.getElementById("calcOutput").innerHTML=formula_split;
+        Operator.complete=true
     }
+    
 }
 //Caesar Code
 function caesar_CloseHome(){
