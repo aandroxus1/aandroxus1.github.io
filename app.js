@@ -124,11 +124,6 @@ function Calculator(inp){
     if (inp=="="){
         let formula = document.getElementById("calcOutput").innerHTML;
         formula_split = formula.split("+")
-        formula_split = formula_split.join("")
-        formula_split = formula.split("-")
-        formula_split = formula_split.join("")
-        formula_split = formula.split("/")
-        formula_split = formula_split.join("")
         document.getElementById("calcOutput").innerHTML=formula_split;
     }
 }
