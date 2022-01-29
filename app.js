@@ -3,16 +3,6 @@ function loginError(){
     document.getElementById("error").loop = false;
     document.getElementById("error").play()
 }
-function loginClose_NewAccount(){
-    document.getElementById("dialog").style.animation="fadeOut 1s"
-    setTimeout(LoginClose,950)
-    document.getElementById("NewAccount").open=true;
-    document.getElementById("NewAccount").style.animation="fadeIn 1s"
-}
-function AccountCreation(name, username, password){
-    const fs = require("fs");
-    fs.appendFile("login.txt",(name,", ",username,", ",password));
-}
 function closeError(){
     document.getElementById("errorDialogue").open=false;
     document.getElementById("error").pause()
@@ -159,6 +149,7 @@ function caesar_CloseHome(){
     CloseHome()
 }
 function caesar_listener(){
+    console.log(word_list)
     let finalList = []
     let numbers = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24]
     let encrypt = document.getElementById("caesar_entry").value;
@@ -170,8 +161,7 @@ function caesar_listener(){
         for (let x of encrypt){
             ascii_list.push(x.charCodeAt(0))
         }
-        console.log(ascii_list)
-        encrypt = [];
+        encrypt = []
         for (let x of ascii_list){
             x++;
             if ((String.fromCharCode(x)) == "{"){
@@ -185,5 +175,6 @@ function caesar_listener(){
         finalList=finalList + "<br>"
         finalList = finalList + encrypt.join("")
     }
+    console.log(finalList)
     document.getElementById("caesar_output").innerHTML=finalList + "<br>";
 }

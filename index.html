@@ -3,35 +3,22 @@
     <head>
         <script src="app.js"></script>
         <link rel="stylesheet" href="main.css">
-         
         <audio id="win95startmp3" src="Win95Startup.mp3" loop="false"></audio>
         <audio id="error" src="error.mp3" loop="false"></audio>
     </head>
-    <body>
-<!--------------------------------------------->
-        <dialog class="dialog" id="NewAccount"><!--New Account-->
-            <h3 class=titleBar>Create an Account</h3>
-            <label class="label_newUser" id="label_new_name">Your name</label>
-            <label class="label_newUser" id="label_new_username">User name</label>
-            <label class="label_newUser" id="label_new_password">Password</label>
-            <input type="text" id="new_name" class="textField">
-            <input type="text" id="new_username" class="textField">
-            <input type="text" id="new_password" class="textField">
-            <button id="newUser_confirm" onclick="AccountCreation(document.getElementById('label_new_name').innerHTML,document.getElementById('label_new_username').innerHTML,document.getElementById('label_new_password').innerHTML)">Create An Account</button>
-        </dialog>
+    <body>  
 <!--------------------------------------------->
         <div> <!--Login Screen-->
 
             <dialog open=true id="dialog" draggable="false">
                 <h3 id="welcome"> Welcome To Windows (V0.10)</h3>
-                <button id="loginX" onclick="loginClose_NewAccount()">x</button>
                 <h4 id="text-instruct">Type a user name and password to log on to Windows.</h4>
                 <img id="winLock" src="Win95_Key.png">
                 <button id="enter" type="button" onclick="Enter()">OK</button>
                 <label id="usernametext">User name:</label>
                 <input id="username" type="text" maxlength="15"><br>
                 <label id=passwordtext>Password:</label>
-                <input id="password" type="text" onkeydown="passwordEntry(event)" maxlength="15"> 
+                <input id="password" type="password" onkeydown="passwordEntry(event)" maxlength="15"> 
                 <button id="cancel" type="button" onclick="Cancel()">Cancel</button>
             </dialog>
 

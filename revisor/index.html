@@ -6,8 +6,16 @@
     </head>
     <body>
         <div class="dialog" id="home">
-            <h3 class="titleBar">Welcome!</h3>
-            <button class="button" id="startbutton">Begin!</button>
+            <label class=titleBar>Questions</label>
+            <label id=questionBar></label>
+            <button type="button" id="answerConf" onclick="file_read()">Start!</button>
         </div>
     </body>
+    <iframe id="iframe" src="questions.txt"></iframe>
+    <style>
+        #iframe{
+            margin-top: 0%;
+            border: 0cm;
+        }
+    </style>
 </html>
