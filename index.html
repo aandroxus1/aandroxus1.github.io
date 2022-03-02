@@ -1,118 +1,17 @@
-<!DOCTYPE html>
+<!DOCTYPE html  >
 <html>
+    <title>Dropdown Hell</title>
     <head>
-        <script src="app.js"></script>
         <link rel="stylesheet" href="main.css">
-        <audio id="win95startmp3" src="Win95Startup.mp3" loop="false"></audio>
-        <audio id="error" src="error.mp3" loop="false"></audio>
+        <script src="app.js"></script>
     </head>
-    <body>  
-<!--------------------------------------------->
-        <div> <!--Login Screen-->
-
-            <dialog open=true id="dialog" draggable="false">
-                <h3 id="welcome"> Welcome To Windows (V0.10)</h3>
-                <h4 id="text-instruct">Type a user name and password to log on to Windows.</h4>
-                <img id="winLock" src="Win95_Key.png">
-                <button id="enter" type="button" onclick="Enter()">OK</button>
-                <label id="usernametext">User name:</label>
-                <input id="username" type="text" maxlength="15"><br>
-                <label id=passwordtext>Password:</label>
-                <input id="password" type="password" onkeydown="passwordEntry(event)" maxlength="15"> 
-                <button id="cancel" type="button" onclick="Cancel()">Cancel</button>
-            </dialog>
-
-            <dialog open=false id="errorDialogue">
-                <h3 id="errorText">Error!</h3>
-                <img id="errorIcon" src="Win95_Error.png">
-                <label id="errorMessage">Incorrect User name or Password!</label>
-                <button id="x" type="button" onClick="closeError()" onkeydown="escError(event)">X</button>
-            </dialog>
-
+    <body>
+        <div class="sidebarHover" id="sidebarTab">
+            <label class="defStyle">></label>
         </div>
-
-<!--------------------------------------------->
-
-        <div> <!--Main Menu-->
-
-            <dialog id="sidebar" open="false" draggable="false">
-                <h3 id="sidebarTitle">sidebar.exe</h3>
-                <button id="diary" onClick="diary_CloseHome()">Diary</button>
-                <button id="calculator" onClick="calc_CloseHome()">Calculator</button>
-                <button id="caesar_decrypt" onclick="caesar_CloseHome()">Caesar Decrypt</button>
-            </dialog>
-            <dialog id="main" open="false">
-                <h3 id="menuGreetingTitle">Introduction.exe</h3>
-                <h1 id="menuGreeting">Welcome!</h1>
-            </dialog>
-
+        <div class="widget" id="sidebar">
+            <label class="defStyle"id="sidebarTitle">Menu! :D</label>
+            <button type="button" class="sidebarButton" id="button1" onclick="defTest()">Button 1</button>
         </div>
-
-<!--------------------------------------------->
-
-        <div> <!--Return to Menu-->
-
-            <dialog id="returnButton" open="false">
-                <button id="returnButton-button" onClick="OpenHome()">Back to Home</button>
-            </dialog>
-
-        </div>
-
-<!--------------------------------------------->
-<!--Diary-->
-        <dialog id="diaryBody">
-            <input type="text" id="diaryText">
-            <label id="diaryData"></label>
-        </dialog>
-
-<!--------------------------------------------->
-<!--Calculator-->
-        <div>
-            <dialog id="calcBody">  
-                <label class=titleBar>calculator.exe</label>
-                <h3 id="calcOutput">0</h3>
-                <div id="calcButtons">
-                    <button id="calc7"onClick="Calculator(7)">7</button>
-                    <button id="calc8"onClick="Calculator(8)">8</button>
-                    <button id="calc9"onClick="Calculator(9)">9</button>
-                    <button id="calc4"onClick="Calculator(4)">4</button>
-                    <button id="calc5"onClick="Calculator(5)">5</button>
-                    <button id="calc6"onClick="Calculator(6)">6</button>
-                    <button id="calc1"onClick="Calculator(1)">1</button>
-                    <button id="calc2"onClick="Calculator(2)">2</button>
-                    <button id="calc3"onClick="Calculator(3)">3</button>
-                    <button id="calc0"onClick="Calculator(0)">0</button>
-                    <button id="calcDiv"onClick="Calculator('/')">/</button>
-                    <button id="calcMtp"onClick="Calculator('*')">*</button>
-                    <button id="calcAdd"onClick="Calculator('+')">+</button>
-                    <button id="calcSub"onClick="Calculator('-')">-</button>
-                    <button id="calcEql"onClick="Calculator('=')">=</button>
-                    <button id="calcDml"onClick="Calculator('.')">.</button>
-                </div>
-            </dialog>
-        </div>
-<!--------------------------------------------->
-<!--Caesar Decrypt-->
-        <div>
-            <dialog class="dialog"id="caesarBody">
-                <label class=titleBar>caesar_decrypt.exe</label>
-                <input type="text" id="caesar_entry">
-                <label id="caesar_output">Output will be here</label>
-                <button id="caesar_start" onclick="caesar_listener()">Start</button>
-            </dialog>
-        </div>
-<!--------------------------------------------->
-        <script>
-            document.addEventListener("keydown", function(event){
-                if (event.key === "Escape"){
-                    closeError();
-                }
-            });
-            document.getElementById("errorDialogue").open=false;
-            document.getElementById("main").open=false;
-            document.getElementById("sidebar").close();
-            document.getElementById("returnButton").close();
-            document.getElementById("diaryBody").close();
-        </script>
     </body>
 </html>

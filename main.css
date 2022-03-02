@@ -1,565 +1,80 @@
-@font-face {
+@font-face{
     font-family: W95FA;
-    src: url(W95FA.otf);
+    src:url(https://aandroxus1.github.io/W95FA.otf)
 }
-body {
-    overflow:hidden;
-    background-color: #008080;
-    color:black;
-    text-align: center;
-    font-family: W95FA;
+html{
+    cursor: url("https://aandroxus1.github.io/Win95_Cursor.ico.png"), default;
 }
-.textField{
-    font-family: W95FA;
-    border-top-color: black;
-    border-left-color: black;
-    border-bottom-color: white;
-    border-right-color: white;
+body{
+    background-color: #ee99ff;
+    overflow: hidden;
 }
-.titleBar{
-    background-color: rgb(0,0,128);
-    color:white;
-    position:absolute;
-    width:100%;
-    top:0%;
-    left:0%;
-    text-align: left;
-}
-#welcome{
-    position:absolute;
-    left:1px;
-    top:-9%;
-    background-color: rgb(0,0,128);
-    color:white;
 
+.widget{
+    border-style: solid;
+    border-width: 3px;
+    border-left-color: silver;
+    border-top-color: silver;
+    border-bottom-color: grey;
+    border-right-color: grey;
 }
-.dialog{
-    background-color:rgb(192, 192, 192);
-    border-top-color: white;
-    border-left-color: white;
-    border-bottom-color: black;
-    border-right-color: black;
+.defStyle{
+    position: relative;
+    font-family:W95FA;
+    text-align:center;
+}
+.sidebarButton{
+    position: relative;
+    border-style: solid;
     border-width: 2px;
-}
-#dialog{
-    background-color:rgb(192, 192, 192);
-    border-top-color: white;
-    border-left-color: white;
-    border-bottom-color: black;
-    border-right-color: black;
-    border-width: 2px;
-    top:40%;
-    height:100px;
-    width: 500px;
-    animation:fadeIn 3s;
-}
-#loginX{
-    background-color: darkgrey;
-    color: grey;
-    position: absolute;
-    right:0%;
-    top:0%;
-    border-top-color: white;
-    border-left-color: white;
-    border-bottom-color: black;
-    border-right-color: black;
-}
-#NewAccount{
-    position: absolute;
-    margin-top:5%;
-    width: 60%;
-    height:40%;
-}
-#new_name{
-    position:absolute;
-    width:40%;
-    top:20%;
-    left:30%;
-}
-#new_username{
-    position:absolute;
-    width:40%;
-    top:30%;
-    left:30%;
-}
-#new_password{
-    position:absolute;
-    width:40%;
-    top:40%;
-    left:30%;
-}
-.label_newUser{
-    position: absolute;
-    left:20%;
-}
-#label_new_name{
-    top:20%;
-}
-#label_new_username{
-    top:30%;
-}
-#label_new_password{
-    top:40%;
-}
-@keyframes fadeIn   {
-    0% {opacity: 0;}
-    100% {opacity: 1;}
-}
-@keyframes fadeOut   {
-    0% {opacity:1;}
-    100% {opacity: 0;}
-}
-#username, #password   {
-    font-family: W95FA;
-    border-top-color: black;
-    border-left-color: black;
-    border-bottom-color: white;
-    border-right-color: white;
-    width:100px;
-    position: absolute;
-    left:40%;
-}
-#username   {
-    position: absolute;
-    bottom: 33%;
-}
-#usernametext, #passwordtext    {
-    position: absolute;
-    left:20%;
-    bottom:35%;
-}
-#passwordtext, #password    {
-    position: absolute;
-    bottom: 10%;
-}
-#enter  {
-    position: absolute;
-    top:24%;
-    right:4%;
-    font-size:80%;
-    font-family: W95FA;
-    width:14%;
-    height:16%;
-    border-top-color: white;
-    border-left-color: white;
-    border-bottom-color: black;
-    border-right-color: black;
-}
-h3  {
-    width:100%;
-    text-align: left;
-    font-size: 100%;
-}
-#text-instruct  {
-    font-size:medium
-}
-#winLock    {
-    position: absolute;
-    top:20%;
-    left:3%;
-}
-#cancel {
-    position: absolute;
-    top:44%;
-    right:4%;
-    font-size:80%;
-    font-family: W95FA;
-    width:14%;
-    height:16%;
-    border-top-color: white;
-    border-left-color: white;
-    border-bottom-color: black;
-    border-right-color: black;
-}
-#errorDialogue  {
-    background-color:rgb(192, 192, 192);
-    border-top-color: white;
-    border-left-color: white;
-    border-bottom-color: black;
-    border-right-color: black;
-    border-width: 2px;
-    top:45%;
-    left:15%;
-    height:100px;
-    width:300px;;
-}
-#errorText{
-    position:absolute;
-    left:0%;
-    top:-9%;
-    background-color: rgb(0,0,128);
-    color:white;
-}
-#errorMessage{
-    font-size: 95%;
-    position: absolute;
-    bottom:45%;
-    left:15%;
+    border-left-color: silver;
+    border-top-color: silver;
+    border-bottom-color: grey;
+    border-right-color: grey;
+    font-family:W95FA;
     text-align: center;
+    height:10%;
+    width:95%;
 }
-#x{
-    background-color: darkgrey;
-    color: grey;
-    position: absolute;
-    right:0%;
-    top:0%;
-    border-top-color: white;
-    border-left-color: white;
-    border-bottom-color: black;
-    border-right-color: black;
-}
-#errorIcon{
-    position: absolute;
-    left:1%;
-    bottom:35%;
-}
-#menuGreetingTitle{
-    background-color: rgb(0,0,128);
-    color:white;
-    position: absolute;
-    top:-10%;
+/************************/
+
+#sidebarTab{
+    width:2%;
+    position:absolute;
+    top:48%;
     left:0%;
-    font-size: large;
-}
-@keyframes dropDown{
-    0%{top:-100%;}
-    100%{top:1%;}
-}
-#main{
-    position: absolute;
-    background-color:rgb(192, 192, 192);
-    border-top-color: white;
-    border-left-color: white;
-    border-bottom-color: black;
-    border-right-color: black;
-    border-width: 2px;
-    top:1%;
-    height:fit-content;
-    width:fit-content;
-    left:0px;
-}
-@keyframes leftIn{
-    0%{left: -15%;}
-    50%{left:-15%}
-    100%{left:0px;}
+    font-size: 200%;
 }
 #sidebar{
-    background-color:rgb(192, 192, 192);
-    border-top-color: white;
-    border-left-color: white;
-    border-bottom-color: black;
-    border-right-color: black;
-    border-width: 2px;
+    background-color: #ee99ff;
+    opacity: 1;
+    position: absolute;
+    width: 15%;
+    height:100%;
+    left:0%;
     top:0%;
-    margin-left:0%;
-    height:97%;
-    width:10%;;
+    display:none;
+    z-index:1;
+    animation: sidebarOut 0.7s;
 }
-@keyframes backUp{
-    0%{top:1%;}
-    100%{top:-100%;}
-}
-@keyframes leftOut{
-    0%{left:0px;}
-    100%{left:-15%}
-}
-@keyframes rightIn{
-    0%{right:-20%;}
-    50%{right:-20%;}
-    100%{margin-right:2%;}
-}
-@keyframes rightOut{
-    0%{margin-right: 2%;}
-    100%{right:-20%}
-}
-#returnButton{
-    position: absolute;
-    font-family:W95FA;
-    background-color:rgb(192, 192, 192);
-    border-top-color: white;
-    border-left-color: white;
-    border-bottom-color: black;
-    border-right-color: black;
-    border-width: 2px;
-    margin-top:2%;
-    margin-right:2%;
-}
-#returnButton-button{
-    font-family:W95FA;
-    background-color:rgb(192, 192, 192);
-    border-top-color: white;
-    border-left-color: white;
-    border-bottom-color: black;
-    border-right-color: black;
-}
-@keyframes diaryBodyIn{
-    0%{bottom:-100%;}
-    100%{bottom: 0%;}
-}
-@keyframes diaryBodyOut{
-    0%{bottom: 0%;}
-    100%{bottom:-100%;}
-}
-@keyframes calcBodyIn{
-    0%{margin-top:-100%;}
-    100%{margin-top:10%;}
-}
-@keyframes calcBodyOut{
-    0%{margin-top:10%;}
-    100%{margin-top:-100%;}
-}
-#diaryBody{
-    position: absolute;
-    font-family:W95FA;
-    background-color:rgb(192, 192, 192);
-    border-top-color: white;
-    border-left-color: white;
-    border-bottom-color: black;
-    border-right-color: black;
-    width: 75%;
-    height:60%;
-    bottom:0%;
+.sidebarHover:hover + #sidebar, #sidebar:hover{
+    display:block;
+    animation: sidebarIn 0.7s;
 }
 #sidebarTitle{
-    position:absolute;
-    left:0%;
-    top:-1%;
-    background-color: rgb(0,0,128);
-    color:white;
+    font-size:4.5vw;
 }
-#diary{
-    position: relative;
-    background-color:rgb(192, 192, 192);
-    border-top-color: white;
-    border-left-color: white;
-    border-bottom-color: black;
-    border-right-color: black;
-    font-size: 100%;
-    font-family:W95FA;
-    top:3%;
-    height:10%;
-    width:100%
-}
-#calculator{
-    position: relative;
-    background-color:rgb(192, 192, 192);
-    border-top-color: white;
-    border-left-color: white;
-    border-bottom-color: black;
-    border-right-color: black;
-    font-size: 100%;
-    font-family:W95FA;
-    top:5%;
-    height:10%;
-    width:100%
-}
-#caesar_decrypt{
-    position: relative;
-    background-color:rgb(192, 192, 192);
-    border-top-color: white;
-    border-left-color: white;
-    border-bottom-color: black;
-    border-right-color: black;
-    font-size: 100%;
-    font-family:W95FA;
-    top:7%;
-    height:10%;
-    width:100%
+#button1{
+    top: 15%;
 }
 
-/*Calculator*/
+/*animation*/
 
-#calcBody{
-    position: absolute;
-    font-family:W95FA;
-    background-color:rgb(192, 192, 192);
-    border-top-color: white;
-    border-left-color: white;
-    border-bottom-color: black;
-    border-right-color: black;
-    font-family:W95FA;
-    position: absolute;
-    margin-top: 10%;
-    height:300px;
-    width:200px;
+@keyframes sidebarIn{
+    0%{left:-17%;}
+    100%{left:0%;}
 }
-#calcTitle{
-    text-align: left;
-    position:absolute;
-    left:0%;
-    top:0%;
-    background-color: rgb(0,0,128);
-    color:white;
-    width:100%
-}
-#calcOutput{
-    position: absolute;
-    border-top-color: white;
-    border-left-color: white;
-    border-bottom-color: black;
-    border-right-color: black;
-    background-color: white;
-    text-align: right;
-    width: 90%;
-    left:5%;
-    top:10%;
-}
-#calc7{
-    position: absolute;
-    font-family:W95FA;
-    width:18%;
-    height:8%;
-    left:20%;
-    top:25%;
-    background-color: rgb(200,196,196);
-}
-#calc8{
-    position: absolute;
-    font-family:W95FA;
-    width:18%;
-    height:8%;
-    left:40%;
-    top:25%;
-    background-color: rgb(200,196,196);
-}
-#calc9{
-    position: absolute;
-    font-family:W95FA;
-    width:18%;
-    height:8%;
-    left:60%;
-    top:25%;
-    background-color: rgb(200,196,196);
-}
-#calc4{
-    position: absolute;
-    font-family:W95FA;
-    width:18%;
-    height:8%;
-    left:20%;
-    top:35%;
-    background-color: rgb(200,196,196);
-}
-#calc5{
-    position: absolute;
-    font-family:W95FA;
-    width:18%;
-    height:8%;
-    left:40%;
-    top:35%;
-    background-color: rgb(200,196,196);
-}
-#calc6{
-    position: absolute;
-    font-family:W95FA;
-    width:18%;
-    height:8%;
-    left:60%;
-    top:35%;
-    background-color: rgb(200,196,196);
-}
-#calc1{
-    position: absolute;
-    font-family:W95FA;
-    width:18%;
-    height:8%;
-    left:20%;
-    top:45%;
-    background-color: rgb(200,196,196);
-}
-#calc2{
-    position: absolute;
-    font-family:W95FA;
-    width:18%;
-    height:8%;
-    left:40%;
-    top:45%;
-    background-color: rgb(200,196,196);
-}
-#calc3{
-    position: absolute;
-    font-family:W95FA;
-    width:18%;
-    height:8%;
-    left:60%;
-    top:45%;
-    background-color: rgb(200,196,196);
-}
-#calc0{
-    position: absolute;
-    font-family:W95FA;
-    width:18%;
-    height:8%;
-    left:20%;
-    top:55%;
-    background-color: rgb(200,196,196);
-}
-#calcDiv{
-    position: absolute;
-    font-family:W95FA;
-    width:18%;
-    height:8%;
-    left:80%;
-    top:25%;
-    background-color: rgb(200,196,196);
-}
-#calcMtp{
-    position: absolute;
-    font-family:W95FA;
-    width:18%;
-    height:8%;
-    left:80%;
-    top:35%;
-    background-color: rgb(200,196,196);
-}
-#calcAdd{
-    position: absolute;
-    font-family:W95FA;
-    width:18%;
-    height:8%;
-    left:80%;
-    top:45%;
-    background-color: rgb(200,196,196);
-}
-#calcSub{
-    position: absolute;
-    font-family:W95FA;
-    width:18%;
-    height:8%;
-    left:80%;
-    top:55%;
-    background-color: rgb(200,196,196);
-}
-#calcEql{
-    position: absolute;
-    font-family:W95FA;
-    width:18%;
-    height:8%;
-    left:60%;
-    top:55%;
-    background-color: rgb(200,196,196);
-}
-#calcDml{
-    position: absolute;
-    font-family:W95FA;
-    width:18%;
-    height:8%;
-    left:40%;
-    top:55%;
-    background-color: rgb(200,196,196);
-}
-/*Caesar Decrypt*/
-@keyframes caesarBodyIn{
-    0%{margin-top:-100%}
-    100%{margin-top:0%}
-}
-@keyframes caesarBodyOut{
-    0%{margin-top:0%}
-    100%{margin-top:-100%}
-}
-#caesarBody{
-    position: absolute;
-    width:200px;
-    height:500px;
-    margin-top: 0%;
+@keyframes sidebarOut{
+    0%{left:0%;}
+    100%{left:-17%;}
 }
