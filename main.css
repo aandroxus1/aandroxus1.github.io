@@ -13,10 +13,10 @@ body{
 .widget{
     border-style: solid;
     border-width: 3px;
-    border-left-color: silver;
-    border-top-color: silver;
-    border-bottom-color: grey;
-    border-right-color: grey;
+    border-left-color: white;
+    border-top-color: white;
+    border-bottom-color: silver;
+    border-right-color: silver;
 }
 .defStyle{
     position: relative;
@@ -77,7 +77,7 @@ body{
     margin-top: 20%;
     margin-bottom: auto;
     font-family: W95FA;
-    width: fit-content;
+    max-width: 60%;
     height: fit-content;
 }
 #button1{
