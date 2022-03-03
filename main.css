@@ -6,7 +6,7 @@ html{
     cursor: url("https://aandroxus1.github.io/Win95_Cursor.ico.png"), default;
 }
 body{
-    background-color: #ee99ff;
+    background-color: #a101ff;
     overflow: hidden;
 }
 
@@ -39,11 +39,13 @@ body{
 /************************/
 
 #sidebarTab{
-    width:2%;
+    width:5%;
+    height: 100%;
     position:absolute;
-    top:48%;
+    top:0%;
     left:0%;
     font-size: 200%;
+    background-color: #aa01ff;
 }
 #sidebar{
     background-color: #ee99ff;
@@ -51,15 +53,9 @@ body{
     position: absolute;
     width: 15%;
     height:100%;
-    left:0%;
+    left:-17%;
     top:0%;
-    display:none;
     z-index:1;
-    animation: sidebarOut 0.7s;
-}
-.sidebarHover:hover + #sidebar, #sidebar:hover{
-    display:block;
-    animation: sidebarIn 0.7s;
 }
 #sidebarTitle{
     font-size:4.5vw;
