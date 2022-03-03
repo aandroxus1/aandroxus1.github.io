@@ -7,100 +7,21 @@ html{
 }
 body{
     background-color: #a101ff;
+    background-image: linear-gradient(to right, #FF01F1,#a101ff);
     overflow: hidden;
 }
-
-.widget{
-    border-style: solid;
-    border-width: 3px;
-    border-left-color: white;
-    border-top-color: white;
-    border-bottom-color: silver;
-    border-right-color: silver;
-}
-.defStyle{
-    position: relative;
-    font-family:W95FA;
-    text-align:center;
-}
-.sidebarButton{
-    position: relative;
-    border-style: solid;
-    border-width: 2px;
-    border-left-color: silver;
-    border-top-color: silver;
-    border-bottom-color: grey;
-    border-right-color: grey;
-    font-family:W95FA;
-    text-align: center;
-    height:10%;
-    width:95%;
-}
-/************************/
-
-#sidebarTab{
-    width:5%;
-    height: 100%;
-    position:absolute;
-    top:0%;
-    left:0%;
-    font-size: 200%;
-    background-color: #aa01ff;
-}
-#sidebar{
-    background-color: #ee99ff;
-    opacity: 1;
+.sidebar{
+    background-color: #ff4c5c;
     position: absolute;
-    width: 15%;
-    height:100%;
-    left:-17%;
-    top:0%;
-    z-index:1;
+    height: max-content;
+    width: 10%;
+    left: 0%;
 }
-#sidebarIco{
-    display:block;
-    margin-left:auto;
-    margin-right:auto;
-    width:90%;
-    position:relative;
-    top:1%;
-    border-radius:50%;
-    border-width: 4px;
-    border-color: #FF0000;
-    border-style: solid;
-}
-#mainText{
-    position:relative;
-    text-align: center;
-    margin-right: auto;
-    margin-left: auto;
-    margin-top: 20%;
-    margin-bottom: auto;
-    font-family: W95FA;
-    max-width: 60%;
-    height: fit-content;
-    background-color: #6a01ff;
-    box-shadow:4px 3px 8px 1px #969696
-}
-#button1{
-    top: 15%;
-}
+.sidebar_logo{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    margin-top: 0%;
 
-/*animation*/
 
-@keyframes sidebarIn{
-    0%{left:-17%;}
-    100%{left:0%;}
-}
-@keyframes sidebarOut{
-    0%{left:0%;}
-    100%{left:-17%;}
-}
-@keyframes rotateHover{
-    0%{transform: rotate(0turn);}
-    100%{transform: rotate(1turn);}
-}
-@keyframes rotateRelease{
-    0%{transform: rotate(1turn);}
-    100%{transform: rotate(0turn);}
 }
