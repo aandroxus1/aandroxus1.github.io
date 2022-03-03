@@ -2,28 +2,31 @@
     font-family: W95FA;
     src: url(W95FA.otf);
 }
-body {
-    overflow:hidden;
-    background-color: #008080;
-    color:black;
+body{
+    background-color: #FF01ff;
+}
+.defStyle{
+    position: absolute;
     font-family: W95FA;
-}
-#sad{
-    position: absolute;
-    top:0%;
-    font-family: W95FA;
-    font-size:xx-large;
+    background-color: #cf01ff;
+    width: 250px;
+    height:250px;
     text-align: center;
+    line-height: 240px;
+    left:38%;
+    top:35%;
+    font-size: 100px;
+    border-radius: 100%;
+    border-style:solid;
+    border-width: 1px;
+    border-color: #000000;
+    box-shadow: 4px 3px 8px 1px #696969;
 }
-#text{
-    position: absolute;
-    top:10%;
-    text-align: center;
-    font-size:large;
+
+#mainLabel{
+    z-index: 1;
 }
-a{
-    position: absolute;
-    top:15%;
-    text-align: center;
-    font-size:large;
+@keyframes expandOption{
+    0%{left:35%}
+    100%{left:10%}
 }

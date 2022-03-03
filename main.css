@@ -79,11 +79,12 @@ body{
     font-family: W95FA;
     max-width: 60%;
     height: fit-content;
+    background-color: #6a01ff;
+    box-shadow:4px 3px 8px 1px #969696
 }
 #button1{
     top: 15%;
 }
-
 
 /*animation*/
 
