@@ -13,9 +13,9 @@ function anim_sidebarIn(){
 }
 function anim_ico_onHover(){
     elem=document.getElementById("sidebarIco")
-    elem.style.animation=("0.7s icoOnHover")
+    elem.style.animation=("0.7s rotateHover")
 }
 function anim_ico_onHoverRelease(){
     elem=document.getElementById("sidebarIco")
-    elem.style.animation=("0.7s icoOnHoverRelease")
+    elem.style.animation=("0.7s rotateRelease")
 }

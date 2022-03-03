@@ -69,9 +69,21 @@ body{
     border-color: #FF0000;
     border-style: solid;
 }
+#mainText{
+    position:relative;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 20%;
+    margin-bottom: auto;
+    font-family: W95FA;
+    width: fit-content;
+    height: fit-content;
+}
 #button1{
     top: 15%;
 }
+
 
 /*animation*/
 
@@ -83,11 +95,11 @@ body{
     0%{left:0%;}
     100%{left:-17%;}
 }
-@keyframes icoOnHover{
+@keyframes rotateHover{
     0%{transform: rotate(0turn);}
     100%{transform: rotate(1turn);}
 }
-@keyframes icoOnHoverRelease{
+@keyframes rotateRelease{
     0%{transform: rotate(1turn);}
     100%{transform: rotate(0turn);}
 }
