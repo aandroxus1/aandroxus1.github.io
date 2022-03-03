@@ -11,4 +11,11 @@ function anim_sidebarIn(){
     elem.style.animation = ("0.7s sidebarIn");
     elem.style.left = "0%";
 }
-console.log(document.getElementById("sidebar").attributes);
+function anim_ico_onHover(){
+    elem=document.getElementById("sidebarIco")
+    elem.style.animation=("0.7s icoOnHover")
+}
+function anim_ico_onHoverRelease(){
+    elem=document.getElementById("sidebarIco")
+    elem.style.animation=("0.7s icoOnHoverRelease")
+}

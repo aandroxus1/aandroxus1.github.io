@@ -3,7 +3,7 @@
     src:url(https://aandroxus1.github.io/W95FA.otf)
 }
 html{
-    cursor: url("https://aandroxus1.github.io/Win95_Cursor.ico.png"), default;
+    cursor: url("https://aandroxus1.github.io/Win95_Cursor.png"), default;
 }
 body{
     background-color: #a101ff;
@@ -57,8 +57,17 @@ body{
     top:0%;
     z-index:1;
 }
-#sidebarTitle{
-    font-size:4.5vw;
+#sidebarIco{
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    width:90%;
+    position:relative;
+    top:1%;
+    border-radius:50%;
+    border-width: 4px;
+    border-color: #FF0000;
+    border-style: solid;
 }
 #button1{
     top: 15%;
@@ -73,4 +82,12 @@ body{
 @keyframes sidebarOut{
     0%{left:0%;}
     100%{left:-17%;}
+}
+@keyframes icoOnHover{
+    0%{transform: rotate(0turn);}
+    100%{transform: rotate(1turn);}
+}
+@keyframes icoOnHoverRelease{
+    0%{transform: rotate(1turn);}
+    100%{transform: rotate(0turn);}
 }
