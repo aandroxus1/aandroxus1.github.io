@@ -1,3 +1,3 @@
-function openSettings(){
+function setColor(){
     alert("settings open, apparently");
 }

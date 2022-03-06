@@ -7,19 +7,18 @@ html{
 }
 body{
     background-color: #a101ff;
-    background-image: linear-gradient(to right, #ff4c5c,#00B3FF);
+    background-image: linear-gradient(to right, #00B3FF,#a133ff);
     overflow: hidden;
 }
 .bubbleHolder{
     position: absolute;
     border-radius: 50%;
-    border-color: black;
     background-color: transparent;
     right: 0%;
     top: 0%;
     transition: all 0.5s;
 }
-.bubbleIco, .bubbleIco2{
+.bubbleIco, .bubbleIco2, .bubbleIco3{
     display: flex;
     position: relative;
     justify-content: center;
@@ -30,22 +29,23 @@ body{
     border-color: black;
     border-radius: 50%;
     transition: all 0.5s;
-    cursor: pointer;
 }
-.bubbleIco2{
+.bubbleIco{
+    z-index: 10;
+}
+.bubbleIco2, .bubbleIco3{
     position: absolute;
-}
-.bubbleHolder:hover>.bubbleIco{
-    transform: translateX(-100%);
+    cursor: pointer;
 }
 .bubbleHolder:hover>.bubbleIco2{
     transform: translateY(100%);
 }
-.bubbleIco:hover{
-    border-color: white;
+.bubbleHolder:hover>.bubbleIco3{
+    transform: translateY(200%);
 }
-.bubbleIco2:hover{
+.bubbleIco2:hover, .bubbleIco3:hover{
     border-color: white;
+    right: 20%;
 }
 .sidebar{
     background-color: #ff4c5c;
