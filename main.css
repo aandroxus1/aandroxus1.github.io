@@ -7,7 +7,7 @@ html{
 }
 body{
     background-color: #a101ff;
-    background-image: linear-gradient(to right, #ff4c5c,#aa01ff);
+    background-image: linear-gradient(to right, #ff4c5c,#00B3FF);
     overflow: hidden;
 }
 .bubbleHolder{
@@ -30,6 +30,7 @@ body{
     border-color: black;
     border-radius: 50%;
     transition: all 0.5s;
+    cursor: pointer;
 }
 .bubbleIco2{
     position: absolute;

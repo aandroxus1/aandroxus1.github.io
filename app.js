@@ -1,3 +1,3 @@
-function defTest(){
-    alert("button1");
+function openSettings(){
+    alert("settings open, apparently");
 }
