@@ -18,6 +18,9 @@ body{
     top: 0%;
     transition: all 0.5s;
 }
+.bubbleHolder:hover{
+    height: auto;
+}
 .bubbleIco, .bubbleIco2, .bubbleIco3{
     display: flex;
     position: relative;
@@ -36,6 +39,9 @@ body{
 .bubbleIco2, .bubbleIco3{
     position: absolute;
     cursor: pointer;
+}
+.bubbleHolder:hover>.bubbleIco{
+    transform: rotate(180deg);
 }
 .bubbleHolder:hover>.bubbleIco2{
     transform: translateY(100%);
