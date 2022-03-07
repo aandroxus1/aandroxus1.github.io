@@ -19,18 +19,19 @@ body{
 }
 .centerBubble, .outerBubble1, .outerBubble2{
     display: flex;
-    position: relative;
-    justify-content: center;
-    top: 0%;
-    right: 0%;
+    position: absolute;
     border-radius: 50%;
     border-style: solid;
     border-width: 4px;
     z-index: 10;
+    transition: all 0.5s;
 }
 .outerBubble1, .outerBubble2{
     position: absolute;
     z-index: 1;
+}
+.centerBubble:hover>.outerBubble1{
+    transform: translateX(100%)
 }
 .bubbleHolder{
     position: absolute;
