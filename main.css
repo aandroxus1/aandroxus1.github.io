@@ -76,6 +76,22 @@ body{
     border-color: white;
     right: 20%;
 }
+.settingsDispatcher{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    right: 10%;
+    top: 10%;
+    border-radius: 50%;
+    border-width: 4px;
+    border-style: solid;
+    min-width: 100px;
+    min-height: 100px;
+    background-color: transparent;
+}
+.ico_colorChange{
+    background-color: #ff4c5c;
+}
 .sidebar{
     background-color: #ff4c5c;
     display: block;
