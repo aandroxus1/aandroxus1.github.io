@@ -77,21 +77,33 @@ body{
     right: 20%;
 }
 .settingsDispatcher{
-    display: flex;
-    justify-content: center;
     position: absolute;
-    right: 10%;
-    top: 10%;
-    border-radius: 50%;
-    border-width: 4px;
-    border-style: solid;
+    margin: auto,auto,0%,auto;
     min-width: 100px;
     min-height: 100px;
     background-color: transparent;
 }
-.ico_colorChange{
+.ico_colorChangeHOST{
+    background-color: transparent;
+    width: 100px;
+    height: 100px;
+    object-fit: fill;
+    transition: all 0.5s
+}
+#ico_colorChange{
+    width: max-content;
+    height: max-content;
+    max-width: 100px;
+    max-height: 100px;
+    object-fit:fill;
     background-color: #ff4c5c;
-    
+    border-radius: 50%;
+    border-width: 4px;
+    border-style: solid;
+    transition: all 0.5s;
+}
+.bubbleIco2:active>.ico_colorChangeHOST{
+    margin-left: 50%;
 }
 .sidebar{
     background-color: #ff4c5c;
@@ -109,6 +121,7 @@ body{
 .sidebar:hover{
     width: 12%;
 }
+
 .sidebar_logo{
     display: flex;
     position: relative;
