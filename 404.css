@@ -4,27 +4,48 @@
 }
 body{
     background-image: linear-gradient(to right, #FF01A1,#FF01FF);
+    min-width: 100%;
+    min-height: 100%;
 }
-.primaryStyle{
+.bubbleHolder{
     position: absolute;
-    font-family: W95FA;
-    background-color: #cf01ff;
-    width: 18%;
-    height: 32%;
-    text-align: center;
-    line-height:400%;
-    left:41%;
-    top:18%;
-    font-size: 100px;
-    border-radius: 100%;
-    border-style:solid;
-    border-width: 1px;
-    border-color: #000000;
-    transition: all 0.7s ease-in-out
+    margin-left: 45%;
+    margin-top: 10%;
+    border-radius: 50%;
+    background-color: transparent;
+    transition: all 0.5s;
 }
-.primaryStyle:hover{
-    transform:scale(70%)
+.bubbleHolder:hover{
+    height: auto;
 }
-#mainLabel{
-    z-index: 1;
+.bubbleIco, .bubbleIco2, .bubbleIco3{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    top: 0%;
+    right: 0%;
+    border-width: 4px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 50%;
+    transition: all 0.5s;
+}
+.bubbleIco{
+    z-index: 10;
+}
+.bubbleIco2, .bubbleIco3{
+    position: absolute;
+    cursor: pointer;
+}
+.bubbleHolder:hover>.bubbleIco{
+    transform: rotate(360deg);
+}
+.bubbleHolder:hover>.bubbleIco2{
+    transform: translateX(-100%);
+}
+.bubbleHolder:hover>.bubbleIco3{
+    transform: translateX(100%);
+}
+.bubbleIco2:hover, .bubbleIco3:hover{
+    border-color: white;
 }
