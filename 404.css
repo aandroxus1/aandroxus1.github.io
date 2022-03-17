@@ -33,7 +33,7 @@ body{
 .bubbleIco{
     z-index: 10;
 }
-.bubbleIco2, .bubbleIco3{
+.bubbleIco2{
     position: absolute;
     cursor: pointer;
 }
@@ -42,10 +42,4 @@ body{
 }
 .bubbleHolder:hover>.bubbleIco2{
     transform: translateX(-100%);
-}
-.bubbleHolder:hover>.bubbleIco3{
-    transform: translateX(100%);
-}
-.bubbleIco2:hover, .bubbleIco3:hover{
-    border-color: white;
 }
