@@ -2,6 +2,9 @@
     font-family: W95FA;
     src: url(W95FA.otf);
 }
+h1{
+    font-family: W95FA;
+}
 body{
     background-image: linear-gradient(to right, #FF01A1,#FF01FF);
     min-width: 100%;
