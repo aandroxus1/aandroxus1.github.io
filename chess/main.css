@@ -1,0 +1,7 @@
+@font-face{
+    font-family: W95FA;
+    src:"https://aandroxus1.github.io/W95FA.otf"
+}
+input{
+    font-family: W95FA, monospace;
+}
