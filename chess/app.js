@@ -19,8 +19,8 @@ function playerGenerate(){
     }
     console.log(playerList)
     *///This code is not working, but I want to move on with actually building the game. Temporary hard player lock will be at 2.
-    for (let i of [1,2,3,4]){
-        playerList[i] = new Player;
+    for (let i of [0,1,2,3]){
+        playerList[i] = new Player(0,1000,0);
         console.log(playerList)
     }
 }
