@@ -15,6 +15,13 @@ class Player{
 //Initialises all players, which contains location, properties held and money in player's balance
 
 function playerGenerate(){
+    playerCount = document.getElementById("playerCount").innerHTML;
+    let playerTotal = []
+    for (var i = 1; i <= playerCount; i++) {
+        playerTotal.push(i);
+    }
+    console.log(playerCount, playerTotal)
+    
     playerList = [Player, Player, Player, Player]
     console.log(playerList)
     for (let i in [0,1,2,3]){
