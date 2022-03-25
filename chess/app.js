@@ -1,3 +1,9 @@
+class playerList{
+    constructor(Player){
+        self.Player = Player;
+        self.current = current;
+    }
+}
 class Player{
     constructor(location, money, properties){
         self.location = location;
@@ -9,25 +15,29 @@ class Player{
 //Initialises all players, which contains location, properties held and money in player's balance
 
 function playerGenerate(){
-    let playerList = [];
-    /*
-    let playerCount = document.getElementById("playerCount").innerHTML;
-    console.log(playerCount)
-    console.log(document.getElementById("playerCount").innerHTML)
-    for (let i of (playerCount)){
-        playerList[i] = new Player;
-    }
+    playerList = [Player, Player, Player, Player]
     console.log(playerList)
-    *///This code is not working, but I want to move on with actually building the game. Temporary hard player lock will be at 2.
-    for (let i of [0,1,2,3]){
-        playerList[i] = new Player(0,1000,0);
-        console.log(playerList)
+    for (let i in [0,1,2,3]){
+        playerList[i].location = 0;
+        playerList[i].money = 1000;
+        playerList[i].properties = ""
+        playerList.current=0
     }
+    document.getElementById("playerLabel").innerHTML=(playerList.length) + " players active."
+    console.log(playerList[0].location, playerList[0].money)
 }
-
 function rollDice(){
     let dice=Math.random()
-    dice = dice * 6
+    dice = dice * 11
     dice = Math.ceil(dice)
+    dice++;
     document.getElementById("testlabel").innerHTML=dice
+    return dice
+}
+function playerMove(activePlayer){
+    dice=rollDice();
+    i = playerList.current
+    console.log(i)
+    playerList.current = i++;
+    console.log(playerList.current)
 }
