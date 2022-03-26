@@ -144,3 +144,6 @@ body{
 #header{
     font-family: W95FA; 
 }
+.rounded{
+    border-radius: 50%;
+}
