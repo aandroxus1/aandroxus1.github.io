@@ -22,7 +22,7 @@ function playerGenerate(){
     }
     console.log(playerCount, playerTotal)
     for(let i in playerTotal){
-        playerList[i]= [Player]
+        playerList[i] = [Player]
     }
     console.log(playerList)
     for (let i in playerTotal){

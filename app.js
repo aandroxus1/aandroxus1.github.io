@@ -1,1 +1,0 @@
-document.getElementById("pieceContainer").appendChild("label")
