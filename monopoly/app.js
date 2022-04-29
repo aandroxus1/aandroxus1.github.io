@@ -6,13 +6,30 @@ class playerList{
     }
 }
 class Player{
-    constructor(location, money, properties){
+    constructor(location, money){
         this.location = location;
         this.money = money;
-        this.properties = properties;
+        this.properties = Properties;
     }
 }
 
+class communityChest{
+    constructor(name, description, reward){
+        this.name = name;
+        this.description = description;
+        this.reward = reward;
+    }
+}
+
+class Properties{
+    constructor(title, value, location, rent, houseVal){
+        this.title = title;
+        this.value = value;
+        this.location = location;
+        this.rent = rent;
+        this.houseVal = houseVal;
+    }
+}
 
 function playerGenerate(){
     let playerCount = document.getElementById("playerCount").value;
@@ -42,12 +59,14 @@ function rollDice(){
     dice = dice * 11
     dice = Math.ceil(dice)
     dice++;
+    document.getElementById("testlabel").innerHTML=dice;
     return dice
 }
 
 function playerMove(){
     dice=rollDice();
     console.log(dice)
+
 }
 
 function completeTurn(){

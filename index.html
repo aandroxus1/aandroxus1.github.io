@@ -1,33 +1,31 @@
 <!DOCTYPE html>
 <html>
-    <title>Dropdown Hell</title>
-    <link rel="shortcut icon" href="https://aandroxus1.github.io/alec_circle.png">
     <head>
-        <link id="href-css" rel="stylesheet" href="main.css">
+        <title>tick tock boi :></title>
+        <link rel="stylesheet" href="main.css">
         <script src="app.js"></script>
+        <p id="varHolder">1</p>
     </head>
     <body>
-        <!--
-        <div class="centerOpen">
-            <img class="centerBubble"src="https://aandroxus1.github.io/alec_cog.png">
-            <img class="outerBubble1"src="https://aandroxus1.github.io/alec_placeholder.png">
-            <img class="outerBubble2"src="https://aandroxus1.github.io/alec_placeholder.png">
+        <div class="clockHolder">
+            <div id="hourLine"></div>
+            <div id="minuteLine"></div>
+            <div id="secondLine"></div>
+            <p id="digitalTime">00:00:00</p>
         </div>
-        -->
-        <div class="sidebar">
-            <div class="sidebar_logo">
-                <a href="https://aandroxus1.github.io/"><img src="https://aandroxus1.github.io/other_alec.png"></a>
-            </div>
+        <div id="desktopIconParent">
+            <input type="button" value="start_create_Element" onclick="start_create_Element()">
+            <input type="button" value="getCookie" onclick="getCookies()">
+            <input type="button" value="clearCookies" onclick="deleteCookies()">
         </div>
-        <div class="bubbleHolder">
-            <div class="settingsDispatcher">
-                <div class="ico_colorChangeHOST">
-                    <img id="ico_colorChange" src="https://aandroxus1.github.io/alec_blank.png">
-                </div>
-            </div>
-            <img class="bubbleIco" alt="settings icon" src="https://aandroxus1.github.io/alec_cog.png">
-            <img class="bubbleIco2" src="https://aandroxus1.github.io/alec_colorwheel.png">
-            <a class="bubbleIco3" href="https://aandroxus1.github.io/monopoly"><img class="rounded" src="https://aandroxus1.github.io/alec_placeholder.png"></a>
+        <div id="newIconApp">
+            <h1>Header</h1>
+            <input type="file" id="fileLink"><br>
+            <input type="text" id="linkTo">
+            <input id="createApp" type="button" onclick="create_Element()">
         </div>
     </body>
+    <script>
+    loop()
+    </script>
 </html>
