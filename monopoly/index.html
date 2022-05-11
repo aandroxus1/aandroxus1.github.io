@@ -4,13 +4,18 @@
         <title>Monopoly</title>
         <script src="app.js"></script>
         <link rel="stylesheet" href="main.css"></style>
+        <img asrc="/CursedTed256 (2).png">
     </head>
     <body>
-        <input id="roll" type="button" value="Click" onclick="rollDice()">
-        <input id="playerCount" type="text">
-        <input value="Generate Players"type="button" onclick="playerGenerate()">
-        <input value="Player Move Function"type="button"onclick="playerMove()">
-        <input value="End Turn"type="button"onclick="completeTurn()">
+        <div class="game_init" id="1">
+            <input id="playerCount" type="text">
+            <input value="Generate Players"type="button" onclick="playerGenerate()">
+        </div>
+        <div class="main_Game">
+            <input value="Player Move Function"type="button"onclick="playerMove()">
+            <input value="End Turn"type="button"onclick="completeTurn()">
+        </div>
+        <label class="OutputLabel" id="OutputLabel"></label>
         <label id="testlabel">X</label>
         <label id="playerLabel"></label>
     </body>

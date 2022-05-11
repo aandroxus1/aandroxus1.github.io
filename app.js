@@ -67,6 +67,8 @@ function create_Element(){
     console.log((t + "=" + linkTo + ";" + expires))
     document.getElementById("desktopIconParent").appendChild(newLink)
 }
+
+
 function getCookies(){
     let c = document.cookie
     console.log(c)

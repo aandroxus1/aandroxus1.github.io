@@ -2,6 +2,29 @@
     font-family: W95FA;
     src:"https://aandroxus1.github.io/W95FA.otf"
 }
-input{
+input{ 
     font-family: W95FA, monospace;
+}
+.game_init{
+    width: fit-content;
+    border: 2px solid black;
+    padding: 1vw;
+    transition: all 2s;
+}
+.disabled{
+    transition: all 2s;
+    transform: translate(-100vw, 0px);
+}
+.OutputLabel{
+    border: 2px solid black;
+    transition: all 2s;
+    transform: translate(10vw,0px);
+    font-family: W95FA;
+    font-size: 10wv;
+}
+.OutputLabel-disable{
+    transition: all 2s;
+    transform: translate(-10vw,0px);
+    font-family: W95FA;
+    font-size: 10wv;
 }

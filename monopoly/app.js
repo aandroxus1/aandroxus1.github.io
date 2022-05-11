@@ -19,17 +19,22 @@ class communityChest{
         this.description = description;
         this.reward = reward;
     }
+
 }
 
 class Properties{
-    constructor(title, value, location, rent, houseVal){
+    constructor(title, value, location, rent, owner){
         this.title = title;
         this.value = value;
         this.location = location;
         this.rent = rent;
-        this.houseVal = houseVal;
+        this.owner = owner;
     }
 }
+Properties.title = "Jeff", "House", "Piss"
+Properties.value = 21, 100, 999
+Properties.location = 1,2,3
+Properties.rent = 2, 10, 99
 
 function playerGenerate(){
     let playerCount = document.getElementById("playerCount").value;
@@ -53,6 +58,7 @@ function playerGenerate(){
     playerList.instances = playerCount
     document.getElementById("playerLabel").innerHTML=(playerList.instances) + " players active."
     console.log(playerList[0].location, playerList[1].money)
+    document.getElementById("1").classList.value = "disabled"
 }
 function rollDice(){
     let dice=Math.random()
@@ -64,8 +70,22 @@ function rollDice(){
 }
 
 function playerMove(){
+    //Pre-move calculations and corrections
     dice=rollDice();
     console.log(dice)
+    p = playerList.current
+    let pLoc = playerList[p].location
+    console.log(pLoc)
+    pLoc = pLoc + dice
+    if (pLoc >= 41){
+        pLoc=pLoc-40
+        playerList[p].money = playerList[p].money + 200
+        document.getElementById("OutputLabel").innerHTML = "Player " + (p+1) + " Passed GO! and collected 200!"
+    }
+    //if (pLoc in Properties.location){
+        //Not Implemented
+    //}
+    playerList[p].location = pLoc
 
 }
 
@@ -77,4 +97,7 @@ function completeTurn(){
     }
     playerList.current = i;
     console.log(playerList.current)
+}
+function toggleOutput(){
+    let label = document.getElementById("OutputLabel")
 }

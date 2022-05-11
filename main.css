@@ -39,7 +39,7 @@ body{
     width: 0px;
     border: 2px solid black;
     position: absolute;
-    transition: all linear 1s;
+    transition: all linear 0s;
     border-radius: 25%;
 }
 #hourLine{
@@ -86,11 +86,12 @@ body{
     max-height: 95%;
 }
 #newIconApp{
-    left: 100px;
+    left: 80vw;
     top: -200px;
     font-size: 10px;
     border: 2px solid black;
     width: fit-content;
+    max-width: 20vw;
     height: fit-content;
     padding: 5px;
     position: absolute;
@@ -99,4 +100,13 @@ body{
 }
 .state_0{
     transform: translate(0px, 200px);
+}
+#ted{
+    left: 20vw;
+    border: 10px solid black;
+    border-radius: 50%;
+    transition: all ease-in-out .4s;
+}
+#ted:hover{
+    border-color: white;
 }
