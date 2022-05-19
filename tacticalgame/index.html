@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="app.js"></script>
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+        <div class="playerDisplay">
+            <div id="playerHead">head</div>
+            <div id="playerArmL">armL</div>
+            <div id="playerArmR">armR</div>
+            <div id="playerLegL">legL</div>
+            <div id="playerLegR">legR</div>
+        </div>
+        <div class="playerDisplay"> /HOSTILE\
+            <input class="enemyButton" type="button" id="enemyHead" value="Head">
+            <input class="enemyButton" type="button" id="enemyArmL" value="Left Arm">
+            <input class="enemyButton" type="button" id="enemyArmR" value="Right Arm">
+            <input class="enemyButton" type="button" id="enemyLegL" value="Left Leg">
+            <input class="enemyButton" type="button" id="enemyLegR" value="Right Leg">
+        </div>
+        <div class="action">
+            <input value="Attack" type="button" class="actionButton" onclick="playerAttack()">
+            <input value="Repair" type="button" class="actionButton" onclick="playerRepair()">
+            <input value="Item" type="button" class="actionButton" onclick="playerConsume()">
+        </div>
+        <script>tick()</script>
+    </body>
+</html>
