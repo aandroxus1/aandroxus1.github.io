@@ -39,8 +39,10 @@ class EnemyHealth{
     }
 }
 
-function playerAttack(){
-
+function playerAttack(tgt){
+    let prevTgt = tgt
+    tgt = tgt - Player.dmg
+    let changePercent = prevTgt - tgt
 }
 
 function tick(){

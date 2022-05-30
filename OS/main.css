@@ -1,0 +1,60 @@
+@font-face {
+    font-family: W95FA;
+    src: url(/assets/W95FA.otf);
+}
+body{
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+#startup{
+    min-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#startupTitle{
+    color: white;
+    display: flex;
+    overflow: auto;
+    animation: flash 2s;
+    animation-iteration-count: 5;
+    font-family: W95FA;
+    font-size: 10vw;
+    transition: all 2s;
+}
+#loadingContainer{
+    margin-top:0%;
+    min-width: 12vw;
+    min-height: 12vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.loading{
+    display: flex;
+    position: absolute;
+    height: 10vw;
+    width: 10vw;
+    border: 0.7vw solid;
+    border-radius: 100%;
+    border-color: #F00 #FEFE0F #e1ff #1ef;
+    box-shadow: 0 0 5vw black;
+    animation: spin 2s infinite linear;
+}
+.img_androxus{
+    display: flex;
+    position: absolute;
+    width:10vw
+}
+@keyframes flash {
+    0%{color: white;}
+    50%{color: black;}
+    100%{color: white;}
+}
+@keyframes spin {
+    0%{transform: rotate(0deg); box-shadow: 0 0 1vw black;}
+    50%{box-shadow: 0 0 5vw black;}
+    100%{transform: rotate(720deg); box-shadow: 0 0 1vw black;}
+}

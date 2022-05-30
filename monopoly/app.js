@@ -32,9 +32,9 @@ class Properties{
     }
 }
 Properties.title = "Jeff", "House", "Piss"
-Properties.value = 21, 100, 999
-Properties.location = 1,2,3
-Properties.rent = 2, 10, 99
+Properties.value = [21, 100, 999]
+Properties.location = [1,2,3]
+Properties.rent = [2, 10, 99]
 
 function playerGenerate(){
     let playerCount = document.getElementById("playerCount").value;
@@ -59,6 +59,7 @@ function playerGenerate(){
     document.getElementById("playerLabel").innerHTML=(playerList.instances) + " players active."
     console.log(playerList[0].location, playerList[1].money)
     document.getElementById("1").classList.value = "disabled"
+    setTimeout(function(){document.getElementById("1").style.display = "none"}, 1000)
 }
 function rollDice(){
     let dice=Math.random()
@@ -75,18 +76,30 @@ function playerMove(){
     console.log(dice)
     p = playerList.current
     let pLoc = playerList[p].location
-    console.log(pLoc)
     pLoc = pLoc + dice
     if (pLoc >= 41){
         pLoc=pLoc-40
         playerList[p].money = playerList[p].money + 200
-        document.getElementById("OutputLabel").innerHTML = "Player " + (p+1) + " Passed GO! and collected 200!"
+        document.getElementById("OutputLabel").innerHTML = document.getElementById("OutputLabel").innerHTML + "<br>Player " + (p+1) + " Passed GO! and collected 200!"
     }
-    //if (pLoc in Properties.location){
-        //Not Implemented
-    //}
     playerList[p].location = pLoc
+    console.log(pLoc)
+    if(propertyCheck(pLoc,p)!= false){
+        index = propertyCheck(pLoc,p)
+        document.getElementById("OutputLabel").innerHTML = document.getElementById("OutputLabel").innerHTML + ("<br> You landed on property " + index-1)
+    }
+    console.log(playerList[p])
 
+}
+function propertyCheck(location, player){
+    let index = (Properties.location)
+    index = index.indexOf(location)
+    console.log(index)
+    if(index >-1){
+        return index
+    } else {
+        return false
+    }
 }
 
 function completeTurn(){

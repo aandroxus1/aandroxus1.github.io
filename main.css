@@ -1,9 +1,9 @@
 @font-face{
     font-family: W95FA;
-    src:url(https://aandroxus1.github.io/W95FA.otf)
+    src:url(/assets/W95FA.otf)
 }
 html{
-    cursor: url("https://aandroxus1.github.io/Win95_Cursor.png"), default;
+    cursor: url("/assets/Win95_Cursor.cur"), default;
 }
 body{
     font-family:W95FA;
@@ -40,7 +40,7 @@ body{
     border: 2px solid black;
     position: absolute;
     transition: all linear 0s;
-    border-radius: 25%;
+    border-radius:25%;
 }
 #hourLine{
     height: 24px;
@@ -109,4 +109,19 @@ body{
 }
 #ted:hover{
     border-color: white;
+}
+.cssStuff{
+    height: auto;
+    width: auto;
+    min-height: 6vw;
+    min-width: 10vw;
+    background-color: transparent;
+    border: 2px solid darkgray;
+    overflow-wrap:break-word;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+    resize: auto;
+    transition: all 0.2s ease-out;
 }

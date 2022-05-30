@@ -13,11 +13,11 @@
             <div id="playerLegR">legR</div>
         </div>
         <div class="playerDisplay"> /HOSTILE\
-            <input class="enemyButton" type="button" id="enemyHead" value="Head">
-            <input class="enemyButton" type="button" id="enemyArmL" value="Left Arm">
-            <input class="enemyButton" type="button" id="enemyArmR" value="Right Arm">
-            <input class="enemyButton" type="button" id="enemyLegL" value="Left Leg">
-            <input class="enemyButton" type="button" id="enemyLegR" value="Right Leg">
+            <input onclick="playerAttack(Enemy.head)" class="enemyButton" type="button" id="enemyHead" value="Head">
+            <input onclick="playerAttack(Enemy.armL)" class="enemyButton" type="button" id="enemyArmL" value="Left Arm">
+            <input onclick="playerAttack(Enemy.armR)" class="enemyButton" type="button" id="enemyArmR" value="Right Arm">
+            <input onclick="playerAttack(Enemy.head)" class="enemyButton" type="button" id="enemyLegL" value="Left Leg">
+            <input onclick="playerAttack(Enemy.head)" class="enemyButton" type="button" id="enemyLegR" value="Right Leg">
         </div>
         <div class="action">
             <input value="Attack" type="button" class="actionButton" onclick="playerAttack()">
