@@ -7,12 +7,18 @@ body{
     align-items: center;
     overflow: hidden;
 }
+#bootloader{
+    min-width: 100vw;
+    min-height: 100vh;
+}
 #startup{
+    display: none;
     min-width: 100vw;
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: all 2s;
 }
 #startupTitle{
     color: white;
@@ -25,7 +31,9 @@ body{
     transition: all 2s;
 }
 #loadingContainer{
-    margin-top:0%;
+    display: none;
+    position: absolute;
+    top: 0%;
     min-width: 12vw;
     min-height: 12vw;
     display: flex;
@@ -35,18 +43,25 @@ body{
 .loading{
     display: flex;
     position: absolute;
-    height: 10vw;
-    width: 10vw;
-    border: 0.7vw solid;
+    height: 9vw;
+    width: 9vw;
+    border: 1vw solid;
     border-radius: 100%;
-    border-color: #F00 #FEFE0F #e1ff #1ef;
+    border-color: #ff4c5c #00b3a3;
     box-shadow: 0 0 5vw black;
-    animation: spin 2s infinite linear;
+    animation: spin 2s;
+    animation-iteration-count: 6;
 }
 .img_androxus{
+    border-radius: 50%;
     display: flex;
     position: absolute;
-    width:10vw
+    width:10vw;
+}
+#main{
+    min-width: 100vw;
+    min-height: 100vh;
+    transition: all 2s;
 }
 @keyframes flash {
     0%{color: white;}
