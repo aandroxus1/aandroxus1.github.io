@@ -1,48 +1,7 @@
 @font-face {
     font-family: W95FA;
-    src: url(W95FA.otf);
-}
-h1{
-    font-family: W95FA;
+    src: url(/assets/W95FA.otf);
 }
 body{
-    background-image: linear-gradient(to right, #FF01A1,#FF01FF);
-    min-width: 100%;
-    min-height: 100%;
-}
-.bubbleHolder{
-    position: absolute;
-    margin-left: 45%;
-    margin-top: 10%;
-    border-radius: 50%;
-    background-color: transparent;
-    transition: all 0.5s;
-}
-.bubbleHolder:hover{
-    height: auto;
-}
-.bubbleIco, .bubbleIco2, .bubbleIco3{
-    display: flex;
-    position: relative;
-    justify-content: center;
-    top: 0%;
-    right: 0%;
-    border-width: 4px;
-    border-style: solid;
-    border-color: black;
-    border-radius: 50%;
-    transition: all 0.5s;
-}
-.bubbleIco{
-    z-index: 10;
-}
-.bubbleIco2{
-    position: absolute;
-    cursor: pointer;
-}
-.bubbleHolder:hover>.bubbleIco{
-    transform: rotate(360deg);
-}
-.bubbleHolder:hover>.bubbleIco2{
-    transform: translateX(-100%);
+    background-color: lightblue;
 }
