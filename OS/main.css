@@ -20,7 +20,7 @@ body{
     color: greenyellow;
     justify-content: center;
     align-items: center;
-    transition: all 2s;
+    transition: opacity 1s;
 }
 #powerButton{
     position: absolute;
