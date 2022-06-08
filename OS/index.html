@@ -6,18 +6,23 @@
         <script src="app.js"></script>
     </head>
     <body>
-        <div id="bootloader">
-            <input id="powerButton" type="button">
+        <div id="pre_bootscreen">
+            <img id="powerButton" src="/assets/other_alec.png" onclick="startup()">
         </div>
-        <div id="startup">
-            <div id="loadingContainer">
-                <div class="loading"></div>
-                <img class="img_androxus" src="/assets/other_alec.png"></img>
+        <div id="bootscreen">
+            <div id="startup">
+                <div id="loadingContainer">
+                    <div class="loading"></div>
+                    <img class="img_androxus" src="/assets/other_alec.png"></img>
+                    <label id="loadingInfo"></label>
+                </div>
             </div>
-            <h1 id="startupTitle">Stand by for startup...</h1>
         </div>
-        <div id="main">
-
+        <div id="sidebar">
+            sidebar
+        </div>
+        <div id="taskbar">
+            taskbar
         </div>
     </body>
 </html>
