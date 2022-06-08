@@ -12,11 +12,17 @@ function sidebarLoader(){
     document.getElementById("loadingInfo").innerHTML = "Loading sidebar..."
     document.getElementById("sidebar").style.display = "block"
     setTimeout(function(){document.getElementById("sidebar").style.opacity = "1"},2500)
-    setTimeout(taskbarLoader, 4000)
+    setTimeout(taskbarLoader, 3000)
 }
 function taskbarLoader(){
     document.getElementById("loadingInfo").innerHTML = "Loading taskbar..."
     document.getElementById("taskbar").style.display = "block"
     setTimeout(function(){document.getElementById("taskbar").style.opacity = "1"},2500)
-    //setTimeout()
+    setTimeout(finaliseLoad, 3000)
+}
+function finaliseLoad(){
+    document.getElementById("loadingInfo").innerHTML = "Welcome!"
+    document.getElementById("bootscreen").style.opacity = "0"
+    setTimeout(function(){document.getElementById("bootscreen").style.display = "none"},2000)
+    
 }
