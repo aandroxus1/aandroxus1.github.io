@@ -6,121 +6,35 @@ html{
     cursor: url("/assets/Win95_Cursor.cur"), default;
 }
 body{
+    min-height: 100vh;
     font-family:W95FA;
-    background-color: #a101ff;
-    background-image: linear-gradient(to right, #FAB3FF,#AF33EF);
     overflow: hidden;
 }
 #varHolder{
     display: none;
 }
-.clockHolder{
+#dynamicTime{
     position: absolute;
-    right: 10px;
+    left: 10px;
     top: 10px;
-    min-width: 100px;
-    min-height: 100px;
-    max-width: fit-content;
-    max-height: fit-content;
+    height: 10vw;
+    width: 10vw;
+    min-width: 10vw;
+    min-height: 10vw;
+    overflow-wrap: break-word;
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
+    resize: auto;
     border-radius: 50%;
     border: 2px solid black;
     background-color: #f1aef1;
-}
-
-
-#hourLine, #minuteLine, #secondLine{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    width: 0px;
-    border: 2px solid black;
-    position: absolute;
-    transition: all linear 0s;
-    border-radius:10%;
-}
-#hourLine{
-    height: 24px;
-    top: 26px;
-    transform-origin: 2px 24px;
-}
-#minuteLine{
-    height: 48px;
-    top: 3px;
-    transform-origin: 2px 48px;
-}
-#secondLine{
-    border: 1px solid black;
-    height: 48px;
-    top: 3px;
-    transform-origin: 1px 48px;
 }
 #digitalTime{
     color: #00F;
     transform: translateY(+20px);
 }
-.desktopIcon{
-    border: 2px solid black;
-    border-radius: 10%;
-    min-width: 50px;
-    min-height: 50px;
-    max-width: 50px;
-    max-height: 50px;
-    background-color: pink;
-    border-spacing: 5px;
-    margin: 5px
-}
-.desktopIconB{
-    border-radius: 10%;
-    min-width: 50px;
-    min-height: 50px;
-    max-width: 50px;
-    max-height: 50px;
-    background-color: pink;
-}
-#desktopIconParent{
-    margin-top: 5px;
-    max-height: 95%;
-}
-#newIconApp{
-    left: 80vw;
-    top: -200px;
-    font-size: 10px;
-    border: 2px solid black;
-    width: fit-content;
-    max-width: 20vw;
-    height: fit-content;
-    padding: 5px;
-    position: absolute;
-    justify-content: center;
-    transition:all 1.3s;
-}
-.state_0{
-    transform: translate(0px, 200px);
-}
-#ted{
-    left: 20vw;
-    border: 10px solid black;
-    border-radius: 50%;
-    transition: all ease-in-out .4s;
-}
-#ted:hover{
-    border-color: white;
-}
-.cssStuff{
-    height: auto;
-    width: auto;
-    min-height: 6vw;
-    min-width: 10vw;
-    background-color: transparent;
-    border: 2px solid darkgray;
-    overflow-wrap:break-word;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: auto;
-    resize: auto;
+#hourLine{
+    width: inherit;
 }

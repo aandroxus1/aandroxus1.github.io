@@ -9,33 +9,64 @@ class Player{
     constructor(location, money){
         this.location = location;
         this.money = money;
-        this.properties = Properties;
     }
 }
+var locationProperties = [
+    { name: "GO", propertyType: "go", rent: -200},
+    { name: "Old Kent Road", propertyType: "property", rent: 60, housePrice: 50, mortgageValue: 25, colour: "brown" },
+    { name: "Community Chest", propertyType: "chest"},
+    { name: "Whitechapel Road", propertyType: "property", rent: 60, housePrice: 50, mortgageValue: 25, colour: "brown" },
+    { name: "Income Tax", rent: 200, propertyType: "tax"},
+    { name: "King's Cross Station", propertyType: "station", rent: 0, housePrice: 200, mortgageValue: 100, colour: "null" },
+    { name: "The Angel Islington", propertyType: "property", rent: 100, housePrice: 50, mortgageValue: 25, colour: "light blue" },
+    { name: "Chance", propertyType: "chance"},
+    { name: "Euston Road", propertyType: "property", rent: 100, housePrice: 50, mortgageValue: 25, colour: "light blue" },
+    { name: "Pentonville Road", propertyType: "property", rent: 120, housePrice: 50, mortgageValue: 25, colour: "light blue" },
+    { name: "Jail", propertyType: "jail"},
+    { name: "Pall Mall", propertyType: "property", rent: 140, housePrice: 100, mortgageValue: 50, colour: "pink" },
+    { name: "Electric Company", propertyType: "utility", rent: 0, housePrice: 150, mortgageValue: 75, colour: "null" },
+    { name: "Whitehall", propertyType: "property", rent: 140, housePrice: 100, mortgageValue: 50, colour: "pink" },
+    { name: "Northumberland Avenue", propertyType: "property", rent: 160, housePrice: 100, mortgageValue: 50, colour: "pink" },
+    { name: "Marylebone Station", propertyType: "station", rent: 0, housePrice: 200, mortgageValue: 100, colour: "null" },
+    { name: "Bow Street", propertyType: "property", rent: 180, housePrice: 100, mortgageValue: 50, colour: "orange" },
+    { name: "Community Chest", propertyType: "chest"},
+    { name: "Marlborough Street", propertyType: "property", rent: 180, housePrice: 100, mortgageValue: 50, colour: "orange" },
+    { name: "Vine Street", propertyType: "property", rent: 200, housePrice: 100, mortgageValue: 50, colour: "orange" },
+    { name: "Free Parking", rent: -100, propertyType: "chest"},
+    { name: "Strand", propertyType: "property", rent: 220, housePrice: 150, mortgageValue: 75, colour: "red" },
+    { name: "Chance", propertyType: "chance"},
+    { name: "Fleet Street", propertyType: "property", rent: 240, housePrice: 150, mortgageValue: 75, colour: "red" },
+    { name: "Trafalgar Square", propertyType: "property", rent: 200, housePrice: 150, mortgageValue: 75, colour: "red" },
+    { name: "Fenchurch St. Station", propertyType: "station", rent: 0, housePrice: 200, mortgageValue: 100, colour: "null" },
+    { name: "Leicester Square", propertyType: "property", rent: 260, housePrice: 150, mortgageValue: 75, colour: "yellow" },
+    { name: "Coventry Street", propertyType: "property", rent: 260, housePrice: 150, mortgageValue: 75, colour: "yellow" },
+    { name: "Water Works", propertyType: "utility", rent: 0, housePrice: 150, mortgageValue: 75, colour: "null" },
+    { name: "Piccadilly", propertyType: "property", rent: 280, housePrice: 150, mortgageValue: 75, colour: "yellow" },
+    { name: "Go To Jail", propertyType: "arrest"},
+    { name: "Regent Street", propertyType: "property", rent: 300, housePrice: 200, mortgageValue: 100, colour: "green" },
+    { name: "Oxford Street", propertyType: "property", rent: 300, housePrice: 200, mortgageValue: 100, colour: "green" },
+    { name: "Community Chest", propertyType: "chest"},
+    { name: "Bond Street", propertyType: "property", rent: 320, housePrice: 200, mortgageValue: 100, colour: "green" },
+    { name: "Liverpool St. Station", propertyType: "station", rent: 0, housePrice: 200, mortgageValue: 100, colour: "null" },
+    { name: "Chance", propertyType: "chance"},
+    { name: "Park Lane", propertyType: "property", rent: 350, housePrice: 200, mortgageValue: 100, colour: "dark blue" },
+    { name: "Super Tax", propertyType: "other", rent: 0, housePrice: 0, mortgageValue: 0, colour: "null" },
+    { name: "Mayfair", propertyType: "property", rent: 400, housePrice: 200, mortgageValue: 100, colour: "dark blue" },
+]
 
-class communityChest{
-    constructor(name, description, reward){
-        this.name = name;
-        this.description = description;
-        this.reward = reward;
-    }
-
+for(var i = 0; i < locationProperties.length; i++){
+    console.log(locationProperties[i].propertyType);
 }
 
-class Properties{
-    constructor(title, value, location, rent, owner){
-        this.title = title;
-        this.value = value;
-        this.location = location;
-        this.rent = rent;
-        this.owner = owner;
-    }
-}
-Properties.title = "Jeff", "House", "Piss"
-Properties.value = [21, 100, 999]
-Properties.location = [1,2,3]
-Properties.rent = [2, 10, 99]
-
+//Create a function called player generate.
+//player generate will take the player count from the input and create an array of the players.
+//For each player in the array, create an object with the following properties: location, money and properties.
+//The location property will be set to 0.
+//The money property will be set to 1000.
+//The properties property will be set to an empty string.
+//The playerList.instances property will be incremented by 1.
+//The playerList.current property will be set to 0.
+//The innerHTML of the player label will be set to the player count + " players active."
 function playerGenerate(){
     let playerCount = document.getElementById("playerCount").value;
     let playerTotal = []
@@ -70,38 +101,26 @@ function rollDice(){
     return dice
 }
 
+
+//This function calculates a player's move by rolling dice and adding the result to their location. 
+//If the player's new location is above 40, their location is reset to their new location minus 40, 
+//and they are awarded 200 dollars. The player's new location and money are outputted to the screen.
 function playerMove(){
-    //Pre-move calculations and corrections
     dice=rollDice();
     console.log(dice)
     p = playerList.current
     let pLoc = playerList[p].location
     pLoc = pLoc + dice
-    if (pLoc >= 41){
+    if (pLoc >= 40){
         pLoc=pLoc-40
         playerList[p].money = playerList[p].money + 200
         document.getElementById("OutputLabel").innerHTML = document.getElementById("OutputLabel").innerHTML + "<br>Player " + (p+1) + " Passed GO! and collected 200!"
     }
     playerList[p].location = pLoc
     console.log(pLoc)
-    if(propertyCheck(pLoc,p)!= false){
-        index = propertyCheck(pLoc,p)
-        document.getElementById("OutputLabel").innerHTML = document.getElementById("OutputLabel").innerHTML + ("<br> You landed on property " + index-1)
-    }
     console.log(playerList[p])
 
 }
-function propertyCheck(location, player){
-    let index = (Properties.location)
-    index = index.indexOf(location)
-    console.log(index)
-    if(index >-1){
-        return index
-    } else {
-        return false
-    }
-}
-
 function completeTurn(){
     i = playerList.current
     i++
@@ -110,7 +129,4 @@ function completeTurn(){
     }
     playerList.current = i;
     console.log(playerList.current)
-}
-function toggleOutput(){
-    let label = document.getElementById("OutputLabel")
 }

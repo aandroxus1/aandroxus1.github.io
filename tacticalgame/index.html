@@ -1,29 +1,15 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <script src="app.js"></script>
         <link rel="stylesheet" href="main.css">
+        <script src="app.js"></script>
+        <title>gam</title>
     </head>
     <body>
-        <div class="playerDisplay">
-            <div id="playerHead">head</div>
-            <div id="playerArmL">armL</div>
-            <div id="playerArmR">armR</div>
-            <div id="playerLegL">legL</div>
-            <div id="playerLegR">legR</div>
+        <div>
+            <input id="atk" type="button" value="atk" onclick="attack()">
+            <div id="output"></div>
         </div>
-        <div class="playerDisplay"> /HOSTILE\
-            <input onclick="playerAttack(Enemy.head)" class="enemyButton" type="button" id="enemyHead" value="Head">
-            <input onclick="playerAttack(Enemy.armL)" class="enemyButton" type="button" id="enemyArmL" value="Left Arm">
-            <input onclick="playerAttack(Enemy.armR)" class="enemyButton" type="button" id="enemyArmR" value="Right Arm">
-            <input onclick="playerAttack(Enemy.head)" class="enemyButton" type="button" id="enemyLegL" value="Left Leg">
-            <input onclick="playerAttack(Enemy.head)" class="enemyButton" type="button" id="enemyLegR" value="Right Leg">
-        </div>
-        <div class="action">
-            <input value="Attack" type="button" class="actionButton" onclick="playerAttack()">
-            <input value="Repair" type="button" class="actionButton" onclick="playerRepair()">
-            <input value="Item" type="button" class="actionButton" onclick="playerConsume()">
-        </div>
-        <script>tick()</script>
     </body>
+    <script>init()</script>
 </html>
