@@ -1,35 +1,37 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>AndroxOS</title>
         <link rel="stylesheet" href="main.css">
         <script src="app.js"></script>
     </head>
     <body>
-        <div id="pre_bootscreen">
-            <img id="powerButton" src="/assets/other_alec.png" onclick="startup()">
+        <div id="taskbar">
+            <img id="startButton" src="/assets/Win95_Start.png"onmousedown="startButtonDown()"onmouseup="startToggle()">
         </div>
-        <div id="bootscreen">
-            <div id="startup">
-                <div id="loadingContainer">
-                    <div class="loading"></div>
-                    <img class="img_androxus" src="/assets/other_alec.png"></img>
-                    <label id="loadingInfo"></label>
-                </div>
-            </div>
+        <div id="startMenu">
+            <span id="startTitle">Windows 95</span>
+                <div class="startIcon">First Icon</div>
+                <div class="startIcon">Second Icon</div>
+                <div id="splitter"></div>
+                <div class="startIcon" onmouseup="openWindow(help)"><img class="startIconImg" src="/assets/win95_help.png">Help</div>
+                <div class="startIcon"><img class="startIconImg" src="/assets/computersmile.png">Power</div>
         </div>
-        <div id="main">
-            <div id="background">
-                
-            </div>
-            <div id="sidebar">
-                sidebar
-                WARNING - MASSIVE WIP. NOT FINALISED
-            </div>
-            <div id="taskbar">
-                taskbar
-            </div>
+        <div class="sysWindow">
+            <div class="windowHeader"><img class="windowHeaderImg" src="/assets/win95_help.png"><div class=windowHeaderText>Help</div>
+            <div class="windowMessage">Opening the start menu : CTRL</div>
+            <div class="windowCloser">X</div>
         </div>
+        <script>
+            function titleCycler(){
+                document.getElementById("startTitle").innerHTML = "Windows 95"
+                setTimeout(titleCycler2, 1000)
+            }
+            function titleCycler2(){
+                document.getElementById("startTitle").innerHTML = "aandroxus1"
+                setTimeout(titleCycler, 1000)
+            }
+            titleCycler()
+        </script>
     </body>
 </html>

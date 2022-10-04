@@ -58,15 +58,6 @@ for(var i = 0; i < locationProperties.length; i++){
     console.log(locationProperties[i].propertyType);
 }
 
-//Create a function called player generate.
-//player generate will take the player count from the input and create an array of the players.
-//For each player in the array, create an object with the following properties: location, money and properties.
-//The location property will be set to 0.
-//The money property will be set to 1000.
-//The properties property will be set to an empty string.
-//The playerList.instances property will be incremented by 1.
-//The playerList.current property will be set to 0.
-//The innerHTML of the player label will be set to the player count + " players active."
 function playerGenerate(){
     let playerCount = document.getElementById("playerCount").value;
     let playerTotal = []
@@ -100,11 +91,6 @@ function rollDice(){
     document.getElementById("testlabel").innerHTML=dice;
     return dice
 }
-
-
-//This function calculates a player's move by rolling dice and adding the result to their location. 
-//If the player's new location is above 40, their location is reset to their new location minus 40, 
-//and they are awarded 200 dollars. The player's new location and money are outputted to the screen.
 function playerMove(){
     dice=rollDice();
     console.log(dice)
@@ -129,4 +115,29 @@ function completeTurn(){
     }
     playerList.current = i;
     console.log(playerList.current)
+}
+function buyProperty(){
+    let p = playerList.current
+    let pLoc = playerList[p].location
+    let pMoney = playerList[p].money
+    let pProp = playerList[p].properties
+    let pPropCount = playerList[p].properties.length
+    let pPropName = locationProperties[pLoc].name
+    let pPropPrice = locationProperties[pLoc].housePrice
+    let pPropColour = locationProperties[pLoc].colour
+    let pPropType = locationProperties[pLoc].propertyType
+    console.log(pPropType)
+    if(pPropType == "property"){
+        if(pPropColour == "brown"){
+            if(pPropCount == 0){
+                if(pMoney >= pPropPrice){
+                    pMoney = pMoney - pPropPrice
+                    playerList[p].money = pMoney
+                    pProp = pProp + (pPropName)
+                    playerList[p].properties = pProp
+                    document.getElementById("OutputLabel").innerHTML = document.getElementById("OutputLabel").innerHTML + "<br>Player " + (p+1) + " bought " + pPropName + " for " + pPropPrice + "!"
+                }
+            }
+        }
+    }
 }

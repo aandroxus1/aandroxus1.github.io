@@ -1,28 +1,25 @@
-function startup(){
-    document.getElementById("powerButton").style.position = "absolute"
-    document.getElementById("powerButton").style.width = "10vw"
-    document.getElementById("powerButton").style.top = "2vh"
-    document.getElementById("powerButton").style.left ="45.5vw"
-    setTimeout(function(){document.getElementById("pre_bootscreen").style.opacity = "0"}, 1000)
-    setTimeout(function(){document.getElementById("pre_bootscreen").style.display = "none"}, 3000)
-    setTimeout(function(){document.getElementById("bootscreen").style.display = "flex"},1000)
-    setTimeout(sidebarLoader,3000)
+function startToggle(){
+    document.getElementById("startButton").style.borderColor = "grey black black grey";
+    if(window.getComputedStyle(startMenu).display == "block") {
+        document.getElementById("startMenu").style.display = "none"
+    } else {
+        document.getElementById("startMenu").style.display = "block"
+    }
 }
-function sidebarLoader(){
-    document.getElementById("loadingInfo").innerHTML = "Loading sidebar..."
-    document.getElementById("sidebar").style.display = "block"
-    setTimeout(function(){document.getElementById("sidebar").style.opacity = "1"},2500)
-    setTimeout(taskbarLoader, 3000)
+function startButtonDown(){
+    document.getElementById("startButton").style.borderColor = "lightgrey white white lightgrey"
 }
-function taskbarLoader(){
-    document.getElementById("loadingInfo").innerHTML = "Loading taskbar..."
-    document.getElementById("taskbar").style.display = "block"
-    setTimeout(function(){document.getElementById("taskbar").style.opacity = "1"},2500)
-    setTimeout(finaliseLoad, 3000)
-}
-function finaliseLoad(){
-    document.getElementById("loadingInfo").innerHTML = "Welcome!"
-    document.getElementById("bootscreen").style.opacity = "0"
-    setTimeout(function(){document.getElementById("bootscreen").style.display = "none"},2000)
-    
-}
+document.addEventListener("keydown", function(event){
+    console.log(event.key)
+    let key = event.key;
+    if (key == "Control"){
+        startButtonDown()
+    }
+})
+document.addEventListener("keyup", function(event){
+    console.log(event.key)
+    let key = event.key;
+    if (key == "Control"){
+        startToggle()
+    }
+})
