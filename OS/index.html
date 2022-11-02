@@ -1,26 +1,47 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>AndroxOS</title>
+        <link rel="icon" href="/assets/alec_circle.png">
+        <title>Windows 95 Remake</title>
         <link rel="stylesheet" href="main.css">
         <script src="app.js"></script>
     </head>
     <body>
+        <div id="follower">
+            text
+        </div>
         <div id="taskbar">
             <img id="startButton" src="/assets/Win95_Start.png"onmousedown="startButtonDown()"onmouseup="startToggle()">
         </div>
         <div id="startMenu">
             <span id="startTitle">Windows 95</span>
-                <div class="startIcon">First Icon</div>
-                <div class="startIcon">Second Icon</div>
+                <div class="startIcon">Filler Icon // Think of things to add pls ty</div>
                 <div id="splitter"></div>
-                <div class="startIcon" onmouseup="openWindow(help)"><img class="startIconImg" src="/assets/win95_help.png">Help</div>
-                <div class="startIcon"><img class="startIconImg" src="/assets/computersmile.png">Power</div>
+                <div class="startIcon" id="helpIcon" onmouseup="openWindow('helpWindow')"><img class="startIconImg" src="/assets/win95_help.png">Help</div>
+                <div class="startIcon" id="powerIcon" onmouseup="openWindow('powerWindow')"><img class="startIconImg" src="/assets/computersmile.png">Power</div>
         </div>
-        <div class="sysWindow">
-            <div class="windowHeader"><img class="windowHeaderImg" src="/assets/win95_help.png"><div class=windowHeaderText>Help</div>
+        <div class="sysWindow" id="helpWindow">
+            <div class="windowHeader">
+                <img class="windowHeaderImg" src="/assets/win95_help.png">
+                <div class="windowHeaderText">Help</div>
+                <img src="/assets/win95_x.png" class="windowX" onmouseup="closeWindow('helpWindow')">
+            </div>
+            <br>
             <div class="windowMessage">Opening the start menu : CTRL</div>
-            <div class="windowCloser">X</div>
+            <div class="windowCloser" onclick="closeWindow('helpWindow')">OK</div>
+            <br>
+        </div>
+        <div class="sysWindow" id="powerWindow">
+            <div class="windowHeader">
+                <img class="windowHeaderImg" src="/assets/computersmile.png">
+                <div class="windowHeaderText">Power Options</div>
+                <img src="/assets/win95_x.png" class="windowX" onmouseup="closeWindow('powerWindow')">
+            </div>
+            <div class="windowMessage">Select a power option!</div>
+            <div class="windowButton" onclick="closeWebsite()">Shut down</div>
+            <br>
+            <div class="windowCloser" onclick="closeWindow('powerWindow')">Cancel</div>
+            <br>
         </div>
         <script>
             function titleCycler(){
