@@ -7,6 +7,9 @@
         <script src="app.js"></script>
     </head>
     <body>
+        <div id="screenOff">
+            <img id="screenOnButton" onclick="openWebsite()" src="/assets/powerbutton.png">
+        </div>
         <div id="follower">
             text
         </div>
@@ -15,10 +18,19 @@
         </div>
         <div id="startMenu">
             <span id="startTitle">Windows 95</span>
-                <div class="startIcon">Filler Icon // Think of things to add pls ty</div>
+                <div class="startIcon" id="calcIcon" onmouseup="openWindow('calcWindow')"><img class="startIconImg" src="/assets/calcIcon.png">Calculator</div>
                 <div id="splitter"></div>
                 <div class="startIcon" id="helpIcon" onmouseup="openWindow('helpWindow')"><img class="startIconImg" src="/assets/win95_help.png">Help</div>
                 <div class="startIcon" id="powerIcon" onmouseup="openWindow('powerWindow')"><img class="startIconImg" src="/assets/computersmile.png">Power</div>
+        </div>
+        <div class="sysWindow" id="calcWindow">
+            <div class="windowHeader">
+                <img class="windowHeaderImg" src="/assets/calcIcon.png">
+                <div class="windowHeaderText">Calculator</div>
+                <img src="/assets/win95_x.png" class="windowX" onmouseup="closeWindow('calcWindow')">
+            </div>
+            <br>
+            <div class="windowMessage">Calcolatr</div>
         </div>
         <div class="sysWindow" id="helpWindow">
             <div class="windowHeader">
@@ -27,7 +39,7 @@
                 <img src="/assets/win95_x.png" class="windowX" onmouseup="closeWindow('helpWindow')">
             </div>
             <br>
-            <div class="windowMessage">Opening the start menu : CTRL</div>
+            <div class="windowMessage">Hey! Welcome to my Windows 95 inspired web OS! <br> Press CTRL to open the start menu.</div>
             <div class="windowCloser" onclick="closeWindow('helpWindow')">OK</div>
             <br>
         </div>
@@ -39,6 +51,7 @@
             </div>
             <div class="windowMessage">Select a power option!</div>
             <div class="windowButton" onclick="closeWebsite()">Shut down</div>
+            <div class="windowButton">Demo</div>
             <br>
             <div class="windowCloser" onclick="closeWindow('powerWindow')">Cancel</div>
             <br>

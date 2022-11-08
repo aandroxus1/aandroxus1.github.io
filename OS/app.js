@@ -1,5 +1,12 @@
 function closeWebsite(){
-    window.close()
+    document.getElementById("screenOff").style.display = "block"
+    document.getElementById("screenOff").style.opacity = 1
+}
+function openWebsite(){
+    let startupAudio = new Audio ('/assets/Win95Startup.mp3')
+    startupAudio.play() 
+    document.getElementById("screenOff").style.opacity = 0
+    setTimeout(function(){document.getElementById("screenOff").style.display = "none"}, 1000)
 }
 function startToggle(){
     document.getElementById("startButton").style.borderColor = "grey black black grey";
@@ -26,10 +33,14 @@ document.addEventListener("keyup", function(event){
     }
 })
 function closeWindow(win){
-    document.getElementById(win).style.display = "none"
+    let docWin = document.getElementById(win)
+    docWin.style.display = "none"
+    docWin.style.left = "1vw"
+    docWin.style.top = "1vw"
 }
 function openWindow(win){
-    document.getElementById(win).style.display = "block"
+    let docWin = document.getElementById(win)
+    docWin.style.display = "block"
 }
 document.addEventListener('mousemove',(event) => {
     let x = event.pageX
@@ -56,6 +67,9 @@ document.addEventListener('mouseover',(event) => {
     if(a == ""){
         fNone()
     }
+    if(a=="screenOff"){
+        fNone()
+    }
     if(a == "taskbar"){
         fBlock()
         text = "Taskbar. Holds icons and the start button."
@@ -70,39 +84,54 @@ document.addEventListener('mouseover',(event) => {
         fBlock()
         text = "Tips to get to know the OS."
     }
+    if(a=="powerIcon"){
+        fBlock()
+        text = "Options to change power status."
+    }
+    if(a=="calcIcon"){
+        fBlock()
+        text = "calutor"
+    }
     
     document.getElementById('follower').innerHTML = text
 })
+document.addEventListener("mousemove", (event) => {
+    //let y = event.pageY
+    //console.log(y)
+    //console.log(window.screen.availHeight)
+    let fHeight = document.getElementById("follower").style.height
+    console.log(fHeight)
+})
 function windowHandler(){
     let down = false
+    let windowDrag = ""
     document.addEventListener("mousedown", (event) => {
+        windowDrag = event.target.parentNode.id
         if(event.target.className == "windowHeader"){
-                down = true
+            down = true
+            document.getElementById(windowDrag).style.zIndex = 9999
+            console.log(down)
+            document.addEventListener("mouseup", event => {
+                down = false
                 console.log(down)
-                let windowDrag = event.target.parentNode.id
-                console.log(windowDrag)
-                let x = event.pageX
-                let y = event.pageY
-                x = x + "px"
-                y = y + "px"
-                console.log(x,y)
+                document.getElementById(windowDrag).style.zIndex = 0
+            })
+            document.addEventListener("mousemove", (event) => {
+                if(down==true){
+                    let x = event.pageX
+                    let y = event.pageY
+                    x = x + "px"
+                    y = y + "px"
+                    document.getElementById(windowDrag).style.left = x
+                    document.getElementById(windowDrag).style.top = y
+                }
+            }) 
+        }
+    })
+}
 
-                document.addEventListener("mouseup", event => {
-                    down = false
-                    console.log(down)
-                })
-                document.addEventListener("mousemove", (event) => {
-                    if(down==true){
-                        let x = event.pageX
-                        let y = event.pageY
-                        x = x + "px"
-                        y = y + "px"
-                        document.getElementById(windowDrag).style.left = x
-                        document.getElementById(windowDrag).style.top = y
-                    }
-                }) 
-            }
-        })
+windowHandler()
+//Application JS
+function calcHost(){
 
 }
-windowHandler()
