@@ -1,40 +1,20 @@
 @font-face{
-    font-family: W95FA;
-    src:url(/assets/W95FA.otf)
-}
-html{
-    cursor: url("/assets/Win95_Cursor.cur"), default;
+    font-family: Raleway;
+    src: url(/assets/raleway.ttf)
 }
 body{
-    min-height: 100vh;
-    font-family:W95FA;
-    overflow: hidden;
+    font-size:7vh;
+    font-family: raleway;
 }
-#varHolder{
-    display: none;
-}
-#dynamicTime{
-    position: absolute;
-    left: 10px;
-    top: 10px;
-    height: 10vw;
-    width: 10vw;
-    min-width: 10vw;
-    min-height: 10vw;
-    overflow-wrap: break-word;
+#header{
+    font-size: 12vh;
     display: flex;
-    justify-content: center;
     align-items: center;
-    overflow: hidden;
-    resize: auto;
-    border-radius: 50%;
-    border: 2px solid black;
-    background-color: #f1aef1;
+     justify-content: center;
 }
-#digitalTime{
-    color: #00F;
-    transform: translateY(+20px);
-}
-#hourLine{
-    width: inherit;
+#footer{
+    font-size:medium;
+    position: absolute;
+    display: block;
+    bottom: 5vh;
 }
