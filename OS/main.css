@@ -3,12 +3,14 @@
     src: url(/assets/W95FA.otf);
 }
 body{
+    user-select: none;
     font-family: W95FA;
     font-size: 2.8vh;
     background-color: #008080;
     overflow:hidden
 }
 #screenOff{
+    display: none;
     position: absolute;
     background-color: black;
     width: 100vw;
@@ -66,6 +68,9 @@ body{
 #startButton:hover{
     cursor:pointer
 }
+#startButton:active{
+    border-color: lightgrey white white lightgrey
+}
 #startTitle{
     color: white;
     position: absolute;
@@ -103,8 +108,9 @@ body{
     max-width: 5vh;
 }
 #splitter{
-    border-top: 1px solid grey;
-    box-shadow: 0 0 1px 1px darkgrey;
+    border-top: 2px solid darkgrey;
+    margin-left: 0.5vh;
+    margin-right: 0.5vh;    
 }
 
 /*Window CSS*/
@@ -114,7 +120,7 @@ body{
     position: absolute;
     width: fit-content;
     height: fit-content;
-    background: lightgrey;
+    background: #c4c4c4;
     border: solid 2px darkgrey;
     overflow: hidden;
     text-align: center;
@@ -163,16 +169,19 @@ body{
 }
 .windowButton{
     width: fit-content;
-    height: 3vh;
+    min-height: 3vh;
+    min-width: 4.2vh;
     border:2px solid;
-    border-color: grey black black grey;
+    border-color: white black black white;
     position: relative;
     padding-left: 1vh;
     padding-right:1vh;
     text-align: center;
     display: inline-block;
     margin: 0 auto;
-
+}
+.windowButton:active{
+    border-color: black white white black;
 }
 .windowCloser{
     width: fit-content;
@@ -199,4 +208,17 @@ body{
     width: fit-content;
     padding: 2px;
     transition: display 2s
+}
+/*Calculator CSS*/
+#calcOut{
+    position: relative;
+    user-select: all;
+    margin-top: 2vh;
+    width: 95%;
+    height: fit-content;
+    background-color: white;
+    border: 2px solid;
+    border-color: black white white black;
+    text-align: right;
+    padding-right: 1vh;
 }

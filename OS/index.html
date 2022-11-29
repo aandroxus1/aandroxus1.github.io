@@ -30,7 +30,33 @@
                 <img src="/assets/win95_x.png" class="windowX" onmouseup="closeWindow('calcWindow')">
             </div>
             <br>
-            <div class="windowMessage">Calcolatr</div>
+            <div id="splitter"></div>
+            <div id="calcOut">0</div>
+            <br>
+
+            <div class="windowButton" onclick="calcHost.getInput('7')" style="color:blue;" onclick="null">7</div>
+           <div class="windowButton" onclick="calcHost.getInput('8')" style="color:blue;" onclick="null">8</div>
+           <div class="windowButton" onclick="calcHost.getInput('9')" style="color:blue;" onclick="null">9</div>
+           <div class="windowButton" onclick="calcHost.getInput('/')" style="color:red;" onclick="null">/</div>
+           <div class="windowButton" onclick="calcHost.getInput('sqrt')" style="color:blue;" onclick="null">sqrt</div>
+            <br>
+           <div class="windowButton" onclick="calcHost.getInput('4')" style="color:blue;" onclick="null">4</div>
+           <div class="windowButton" onclick="calcHost.getInput('5')" style="color:blue;" onclick="null">5</div>
+           <div class="windowButton" onclick="calcHost.getInput('6')" style="color:blue;" onclick="null">6</div>
+           <div class="windowButton" onclick="calcHost.getInput('*')" style="color:red;" onclick="null">*</div>
+           <div class="windowButton" onclick="calcHost.getInput('%')" style="color:blue;" onclick="null">%</div>
+            <br>
+           <div class="windowButton" onclick="calcHost.getInput('1')" style="color:blue;" onclick="null">1</div>
+           <div class="windowButton" onclick="calcHost.getInput('2')" style="color:blue;" onclick="null">2</div>
+           <div class="windowButton" onclick="calcHost.getInput('3')" style="color:blue;" onclick="null">3</div>
+           <div class="windowButton" onclick="calcHost.getInput('-')" style="color:red;" onclick="null">-</div>
+           <div class="windowButton" onclick="calcHost.getInput('1/x')" style="color:blue;" onclick="null">1/x</div>
+            <br>
+           <div class="windowButton" onclick="calcHost.getInput('0')" style="color:blue;" onclick="null">0</div>
+           <div class="windowButton" onclick="calcHost.getInput('invert')" style="color:blue;" onclick="null">+/-</div>
+           <div class="windowButton" onclick="calcHost.getInput('.')" style="color:blue;" onclick="null">.</div>
+           <div class="windowButton" onclick="calcHost.getInput('+')" style="color:red;" onclick="null">+</div>
+           <div class="windowButton" onclick="calcHost.calculateResult()" style="color:red;" onclick="null">=</div>
         </div>
         <div class="sysWindow" id="helpWindow">
             <div class="windowHeader">

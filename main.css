@@ -1,20 +1,10 @@
 @font-face{
     font-family: Raleway;
-    src: url(/assets/raleway.ttf)
+    src: url("/assets/raleway.ttf")
 }
 body{
-    font-size:7vh;
-    font-family: raleway;
+    font-family: Raleway;
 }
-#header{
-    font-size: 12vh;
-    display: flex;
-    align-items: center;
-     justify-content: center;
-}
-#footer{
-    font-size:medium;
-    position: absolute;
-    display: block;
-    bottom: 5vh;
+#intro{
+    
 }
